@@ -16,12 +16,20 @@ function App() {
       >
         <Slider>
           <Slide index={0}>
-          <div>
-            <div className="container-fluid">
-              I am the first Slide.
-              <ButtonNext/>
-            </div>
-          </div>
+          <div className="section-1">
+                <div className="container-fluid">
+                  <div className="section-1-content">
+                    <p className="section-1-p">HELLO WORLD</p>
+                    <h1>Sunny's Portfolio</h1>
+                    <p><a className="btn btn-dark" href="https://github.com/devsigner-sunny" role="button">
+                      <span className="fa fa-github" aria-hidden="true"></span>
+                      &nbsp; Github</a></p>
+                  </div>
+                  <ButtonNext className="to-bottom-first">
+                    <span className="fa fa-angle-double-down" aria-hidden="true"></span>
+                  </ButtonNext>
+                </div>
+              </div>
           </Slide>
           <Slide index={1}>I am the second Slide.</Slide>
           <Slide index={2}>I am the third Slide.</Slide>
