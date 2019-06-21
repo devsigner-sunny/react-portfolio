@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import { ButtonBack, ButtonNext } from 'pure-react-carousel';
+import { ButtonBack, ButtonNext } from 'pure-react-carousel';
 import Typed from 'typed.js';
 
 class Section2 extends Component {
@@ -19,18 +19,18 @@ class Section2 extends Component {
   render() {
     return (
       <div className="section-2">
-        {/* <ButtonBack className="to-top">
+        <ButtonBack className="to-top">
           <span className="fa fa-angle-double-up" aria-hidden="true"></span>
-        </ButtonBack> */}
+        </ButtonBack>
         <div className="container-fluid">
           <div className="section-2-content">
             <h4 className="section-2-h4">I am a developer having&nbsp;
             <strong id="typed" style={{ whiteSpace: "pre" }} ref={(el) => { this.el = el; }}></strong> skills.</h4>
           </div>
         </div>
-        {/* <ButtonNext className="to-bottom">
+        <ButtonNext className="to-bottom">
           <span className="fa fa-angle-double-down" aria-hidden="true"></span>
-        </ButtonNext> */}
+        </ButtonNext>
       </div>
     );
   }

@@ -2,6 +2,7 @@ import React from 'react';
 import 'components/App/App.css';
 import { CarouselProvider, Slider, Slide, ButtonNext} from 'pure-react-carousel';
 import Section2 from 'components/section2'
+import Section3 from 'components/section3'
 
 
 function App() {
@@ -31,11 +32,15 @@ function App() {
                 </div>
               </div>
           </Slide>
-          <Slide index={1}>I am the second Slide.</Slide>
-          <Slide index={2}>I am the third Slide.</Slide>
+          <Slide index={1}>
+              <Section2 />
+            </Slide>
+
+            <Slide index={2}>
+              <Section3 />
+            </Slide>
         </Slider>
       </CarouselProvider>
-        <Section2 />
     </div>
   );
 }
