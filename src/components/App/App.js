@@ -33,12 +33,12 @@ function App() {
               </div>
           </Slide>
           <Slide index={1}>
-              <Section2 />
-            </Slide>
+            <Section2 />
+          </Slide>
 
-            <Slide index={2}>
-              <Section3 />
-            </Slide>
+          <Slide index={2}>
+            <Section3 />
+          </Slide>
         </Slider>
       </CarouselProvider>
     </div>

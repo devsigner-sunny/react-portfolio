@@ -45,6 +45,17 @@ ul {
   left: 0%;
   cursor: pointer; }
 
+.to-top-project {
+  background: none;
+  color: #fefefe;
+  border: none;
+  width: 100%;
+  height: 8%;
+  position: absolute;
+  top: 1%;
+  left: 0%;
+  cursor: pointer; }
+
 .to-bottom {
   background: none;
   color: #fefefe;
@@ -55,6 +66,29 @@ ul {
   bottom: 1%;
   left: 0%;
   cursor: pointer; }
+
+.to-bottom-project {
+  background: none;
+  color: #fefefe;
+  border: none;
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  bottom: 0%;
+  left: 0%;
+  cursor: pointer; }
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+  .to-bottom-project {
+    background: none;
+    color: #fefefe;
+    border: none;
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    bottom: -35%;
+    left: 0%;
+    cursor: pointer; } }
 
 .to-bottom-first {
   background: none;
@@ -103,8 +137,17 @@ ul {
   color: #fefefe;
   background-color: #1a1a1a;
   overflow: auto; }
-  .section-2 .page-2-h4 {
-    font-weight: 400; }
+
+.section-3 {
+  position: relative;
+  height: 101vh;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fefefe;
+  background-color: #1a1a1a;
+  overflow: auto; }
 
 .typed-cursor {
   opacity: 1;
@@ -119,3 +162,70 @@ ul {
     opacity: 0; }
   100% {
     opacity: 1; } }
+
+.content-wrapper {
+  padding: 1rem; }
+
+.project-title {
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 1.6rem; }
+
+.project-title-p3 {
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 1.6rem; }
+
+@media screen and (min-width: 0px) and (max-width: 767px) {
+  .project-title {
+    margin: 200px 0 5px 0;
+    text-align: center;
+    font-size: 1.6rem; }
+  .project-title-p3 {
+    margin: 140px 0 5px 0;
+    text-align: center;
+    font-size: 1.6rem; } }
+
+.sub-title {
+  text-align: center;
+  padding-bottom: 10px;
+  font-size: 1.2rem; }
+
+.embed-responsive {
+  margin-bottom: 10px; }
+
+.info {
+  text-align: left; }
+
+.content-title {
+  padding-top: 10px; }
+
+.content-summary {
+  line-height: initial;
+  width: 80%; }
+
+.content-list {
+  font-family: 'Raleway', sans-serif;
+  padding: 2rem; }
+
+.content-list li {
+  display: block; }
+
+.btn-wrapper {
+  text-align: center; }
+
+button {
+  cursor: pointer; }
+
+.btn-info-link {
+  margin-right: 10px; }
+
+.content-text-stacks {
+  line-height: 1.6; }
+
+@media screen and (min-width: 0px) and (max-width: 533px) {
+  .btn-info-link {
+    width: 38px;
+    overflow: hidden; }
+    .btn-info-link .fa {
+      margin-right: 20px; } }
