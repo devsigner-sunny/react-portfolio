@@ -37,7 +37,7 @@ Project Proposal and Report (Analysis, Diagram Modelling)</li>
 Front-end development for users</li>
                   </ul>
                 </li>
-                <p className="content-text-stacks" aria-hidden="true"> <code>HTML5/CSS</code> <code>Javascript</code> <code>mySQL</code> <code>PHP</code> 
+                <p className="content-text-stacks" aria-hidden="true"> <code>HTML5/CSS</code><code>Javascript</code> <code>Three.js</code><code>mySQL</code> <code>PHP</code> 
                 </p>
               </ul>
             </div>
