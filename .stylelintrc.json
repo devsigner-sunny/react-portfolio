@@ -1,0 +1,32 @@
+{
+  "extends": "stylelint-config-sass-guidelines",
+  "plugins": [
+    "stylelint-order"
+  ],
+  "rules": {
+    "comment-empty-line-before": "never",
+    "comment-no-empty": true,
+    "function-comma-space-after": "always",
+    "color-function-notation": "legacy",
+    "function-linear-gradient-no-nonstandard-direction": null,
+    "function-whitespace-after": null,
+    "no-descending-specificity": null,
+    "selector-id-pattern": null,
+    "selector-class-pattern": null,
+    "no-duplicate-at-import-rules": true,
+    "no-unknown-animations": true,
+    "indentation": 2,
+    "number-leading-zero": "always",
+    "order/properties-alphabetical-order": true,
+    "property-no-unknown": null,
+    "rule-empty-line-before": null,
+    "number-max-precision": 5,
+    "alpha-value-notation": "number",
+    "selector-pseudo-element-colon-notation": null,
+    "shorthand-property-no-redundant-values": null,
+    "string-quotes": "double",
+    "max-line-length": [150, {
+      "ignore": ["comments"]
+    }]
+  }
+}
