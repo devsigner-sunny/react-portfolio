@@ -22,6 +22,8 @@
     "rule-empty-line-before": null,
     "number-max-precision": 5,
     "alpha-value-notation": "number",
+    "selector-max-id": 2,
+    "max-nesting-depth": null,
     "selector-pseudo-element-colon-notation": null,
     "shorthand-property-no-redundant-values": null,
     "string-quotes": "double",

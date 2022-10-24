@@ -1,12 +1,21 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Corben&family=Cutive&display=swap");
-@import "../Scss/colors";
+@import "../Scss/styles";
+@import "../Scss/mixins/link-text-decoration";
 
 
 :root {
-  --accent_color: $primary-color;
+  accent-color: $primary-color;
 }
 
+body {
+  background: $bg-light;
+}
+
+#root {
+  > section {
+    @include make-container();
+  }
+}
 h1,
 h2,
 h3,
@@ -14,16 +23,20 @@ h4,
 h5,
 h6 {
   color: $primary-color;
-  font-family: "Corben", cursive;
+  font-family: $font-family-heading;
+  letter-spacing: 1px;
 }
 body {
-  font-family: "Cutive", serif;
+  font-family: $font-family-base;
 }
 
-html {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -ms-overflow-style: none; }
+a {
+  color: $color-link;
+  text-decoration: none;
+  transform: all 0.5s ease-in;
 
-body::-webkit-scrollbar {
-  width: 0 !important; }
+  &:hover {
+    @include link-text-decoration();
+    color: $color-text;
+  }
+}
