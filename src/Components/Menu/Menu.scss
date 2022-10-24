@@ -1,0 +1,83 @@
+@import "../../Scss/variables/colors";
+@import "../../Scss/variables/typography";
+@import "../../Scss/variables/default-variables";
+@import "../../Scss/mixins/link-text-decoration";
+
+
+.menu__trigger {
+  background: transparent;
+  border: unset;
+  color: $color-text;
+  font-size: $font-size-md;
+  margin: 0;
+  padding: $gap-xs $gap-base;
+  z-index: 1000;
+
+  &:focus,
+  &:hover {
+    box-shadow: unset;
+  }
+
+  svg {
+    color: $color-text;
+    fill: $color-text;
+    height: 2em;
+    width: 2em;
+  }
+}
+
+.nav__logo {
+  padding: $gap-xs $gap-base;
+}
+
+
+.site__navigation {
+  height: 100%;
+  overflow: hidden;
+  visibility: hidden;
+  width: 100%;
+
+  &.visible {
+    .menus__wrapper {
+      transform: translateY(0);
+    }
+  }
+}
+
+
+
+.menus__wrapper {
+  background-color: $bg-light;
+  left: 0;
+  overflow: hidden auto;
+  top: 0;
+  transform: translateY(-100%);
+  transition: 0.5s ease all;
+  will-change: transform;
+}
+
+.menus {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    padding: $gap-base;
+    text-align: center;
+  }
+  a {
+    color: $color-text;
+    font-family: $font-family-heading;
+    font-size: $font-size-xl;
+
+    &:hover {
+      @include link-text-decoration($black);
+      color: $color-link;
+    }
+  }
+}
+
+.menus_footer {
+  .d-flex {
+    gap: $gap-base;
+  }
+}

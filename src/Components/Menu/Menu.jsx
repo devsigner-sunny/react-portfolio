@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import './Menu.css';
 import { VscGrabber, VscClose } from 'react-icons/vsc';
 import { Link } from 'react-router-dom';
+import { Stack, Button } from 'react-bootstrap';
 import { logoText, socialLinks } from '../../content';
+import './Menu.scss';
 
 function Menu() {
   const [isActive, setActive] = useState('false');
@@ -12,62 +13,64 @@ function Menu() {
     document.body.classList.toggle('ovhidden');
   };
 
+  const menuList = [
+    {
+      title: 'Home',
+      link: '/',
+    },
+    {
+      title: 'Work',
+      link: '/work',
+    },
+    {
+      title: 'About',
+      link: '/about',
+    },
+    {
+      title: 'Contact',
+      link: '/contact',
+    },
+  ];
+
   return (
-    <>
-      <header className="fixed-top site__header">
-        <div className="d-flex align-items-center justify-content-between">
-          <Link className="navbar-brand nav_ac" to="/">
+    <header className="fixed-top site__header h-100">
+      <Stack direction="horizontal" gap={3} className="w-100 z-index-sticky">
+        <div>
+          <Link className="navbar-brand nav__logo" to="/">
             {logoText}
             {' '}
             🌞
           </Link>
-          <div className="d-flex align-items-center">
-            <button type="button" className="menu__button  nav_ac" onClick={handleToggle}>
-              {!isActive ? <VscClose /> : <VscGrabber />}
-            </button>
-
-          </div>
         </div>
-
-        <div className={`site__navigation ${!isActive ? 'menu__opend' : ''}`}>
-          <div className="bg__menu h-100">
-            <div className="menu__wrapper bg-white">
-              <div className="menu__container p-3">
-                <ul className="the_menu">
-                  <li className="menu_item ">
-                    <Link onClick={handleToggle} to="/" className="my-3">Home</Link>
-                  </li>
-                  <li className="menu_item">
-                    <Link onClick={handleToggle} to="/work" className="my-3">Work</Link>
-                  </li>
-                  <li className="menu_item">
-                    <Link onClick={handleToggle} to="/about" className="my-3">About</Link>
-                  </li>
-                  <li className="menu_item">
-                    <Link onClick={handleToggle} to="/contact" className="my-3"> Contact</Link>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div className="menu_footer d-flex flex-column flex-md-row justify-content-between align-items-md-center position-absolute w-100 p-3">
-            <div className="d-flex">
-              <a href={socialLinks.linkedin}>LinkedIn</a>
-              <a href={socialLinks.github}>Github</a>
-            </div>
-            <p className="copyright m-0">
-              copyright __
-              {logoText}
-            </p>
-          </div>
+        <div className="ms-auto">
+          <Button className="menu__trigger" variant="link" onClick={handleToggle}>
+            {!isActive ? <VscClose /> : <VscGrabber />}
+          </Button>
         </div>
-      </header>
-      <div className="br-top" />
-      <div className="br-bottom" />
-      <div className="br-left" />
-      <div className="br-right" />
+      </Stack>
 
-    </>
+      <div className={`site__navigation bg-white ${!isActive && 'visible'}`}>
+        <div className="h-100 menus__wrapper p-3 w-100 h-100 position-relative d-flex justify-content-center align-items-center">
+          <ul className="menus">
+            {menuList.map(({ link, title }) => (
+              <li className="menu_item">
+                <Link onClick={handleToggle} to={link} className="my-3">{title}</Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="menus_footer p-3 d-flex flex-column flex-md-row justify-content-between align-items-md-center fixed-bottom w-100">
+          <div className="d-flex">
+            <a target="_blank" href={socialLinks.linkedin} rel="noreferrer">LinkedIn</a>
+            <a target="_blank" href={socialLinks.github} rel="noreferrer">Github</a>
+          </div>
+          <p className="copyright m-0">
+            copyright __
+            {logoText}
+          </p>
+        </div>
+      </div>
+    </header>
   );
 }
 
