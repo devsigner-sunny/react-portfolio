@@ -6,7 +6,7 @@ import { introData, meta } from '../content';
 function Home() {
   return (
     <HelmetProvider>
-      <section id="home" className="home">
+      <section id="home" className="home page">
         <Helmet>
           <meta charSet="utf-8" />
           <title>{meta.title}</title>
