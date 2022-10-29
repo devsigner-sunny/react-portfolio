@@ -1,6 +1,9 @@
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 @import "../Scss/styles";
 @import "../Scss/mixins/link-text-decoration";
+
 
 
 :root {
@@ -11,11 +14,6 @@ body {
   background: $bg-light;
 }
 
-#root {
-  > section {
-    @include make-container();
-  }
-}
 h1,
 h2,
 h3,

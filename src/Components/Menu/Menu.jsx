@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { VscGrabber, VscClose } from 'react-icons/vsc';
 import { Link } from 'react-router-dom';
-import { Stack, Button } from 'react-bootstrap';
 import { logoText, socialLinks } from '../../content';
 import './Menu.scss';
 
@@ -33,8 +32,8 @@ function Menu() {
   ];
 
   return (
-    <header className="fixed-top site__header h-100">
-      <Stack direction="horizontal" gap={3} className="w-100 z-index-sticky">
+    <header>
+      <div className="w-100 z-index-sticky">
         <div>
           <Link className="navbar-brand nav__logo" to="/">
             {logoText}
@@ -43,11 +42,11 @@ function Menu() {
           </Link>
         </div>
         <div className="ms-auto">
-          <Button className="menu__trigger" variant="link" onClick={handleToggle}>
+          <button type="button" className="menu__trigger" onClick={handleToggle}>
             {!isActive ? <VscClose /> : <VscGrabber />}
-          </Button>
+          </button>
         </div>
-      </Stack>
+      </div>
 
       <div className={`site__navigation bg-white ${!isActive && 'visible'}`}>
         <div className="h-100 menus__wrapper p-3 w-100 h-100 position-relative d-flex justify-content-center align-items-center">
