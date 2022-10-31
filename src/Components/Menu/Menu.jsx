@@ -51,8 +51,8 @@ function Menu() {
       <div className={`site__navigation bg-white ${!isActive && 'visible'}`}>
         <div className="h-100 menus__wrapper p-3 w-100 h-100 position-relative d-flex justify-content-center align-items-center">
           <ul className="menus">
-            {menuList.map(({ link, title }) => (
-              <li className="menu_item">
+            {menuList.map(({ link, title }, index) => (
+              <li className="menu_item" key={index}>
                 <Link onClick={handleToggle} to={link} className="my-3">{title}</Link>
               </li>
             ))}
