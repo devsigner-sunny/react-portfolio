@@ -9,7 +9,6 @@ function Menu() {
 
   const handleToggle = () => {
     setActive(!isActive);
-    document.body.classList.toggle('ovhidden');
   };
 
   const menuList = [
@@ -32,39 +31,39 @@ function Menu() {
   ];
 
   return (
-    <header>
-      <div className="w-100 z-index-sticky">
+    <header className="bg__main">
+      <div className="flex items-center justify-between w-full">
         <div>
-          <Link className="navbar-brand nav__logo" to="/">
+          <Link className="px-3 py-1" to="/">
             {logoText}
             {' '}
             🌞
           </Link>
         </div>
-        <div className="ms-auto">
+        <div className="my-auto min-h-fit">
           <button type="button" className="menu__trigger" onClick={handleToggle}>
             {!isActive ? <VscClose /> : <VscGrabber />}
           </button>
         </div>
       </div>
 
-      <div className={`site__navigation bg-white ${!isActive && 'visible'}`}>
-        <div className="h-100 menus__wrapper p-3 w-100 h-100 position-relative d-flex justify-content-center align-items-center">
-          <ul className="menus">
+      <div className={`site__navigation bg__main ${!isActive && 'visible flex flex-col justify-center'}`}>
+        <div className="relative flex items-center justify-center menus__wrapper">
+          <ul className="pl-0 list-none menus md:py-20">
             {menuList.map(({ link, title }, index) => (
-              <li className="menu_item" key={index}>
-                <Link onClick={handleToggle} to={link} className="my-3">{title}</Link>
+              <li className="p-4 text-center" key={index}>
+                <Link onClick={handleToggle} to={link} className="my-3 ">{title}</Link>
               </li>
             ))}
           </ul>
         </div>
-        <div className="menus_footer p-3 d-flex flex-column flex-md-row justify-content-between align-items-md-center fixed-bottom w-100">
-          <div className="d-flex">
-            <a target="_blank" href={socialLinks.linkedin} rel="noreferrer">LinkedIn</a>
-            <a target="_blank" href={socialLinks.github} rel="noreferrer">Github</a>
+        <div className="flex flex-col justify-between w-full p-3 menus__footer flex-md-row md:items-center">
+          <div className="flex">
+            <a className="p-1 text-sm" target="_blank" href={socialLinks.linkedin} rel="noreferrer">LinkedIn</a>
+            <a className="p-1 text-sm" target="_blank" href={socialLinks.github} rel="noreferrer">Github</a>
           </div>
-          <p className="copyright m-0">
-            copyright __
+          <p className="m-0 text-sm copyright">
+            copyright__
             {logoText}
           </p>
         </div>
