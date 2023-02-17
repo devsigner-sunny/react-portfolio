@@ -2,9 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 @import "../Scss/styles";
+@import "../Scss/variables/colors";
 @import "../Scss/mixins/link-text-decoration";
 
 
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+
+  h2 {
+    @apply text-xl;
+  }
+
+  .section-title {
+    @apply text-2xl font-bold mb-2;
+  }
+
+  .bg__main {
+    background-color: $bg-light;
+  }
+
+  .text__black {
+    color: $black;
+  }
+
+  .text__heading {
+    color: $primary-color;
+  }
+
+  .text__link {
+    color: $color-link;
+  }
+}
 
 :root {
   accent-color: $primary-color;
