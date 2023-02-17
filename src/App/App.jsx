@@ -7,7 +7,9 @@ export default function App() {
   return (
     <>
       <Menu />
-      <AppRoutes />
+      <div className="container px-32 py-10">
+        <AppRoutes />
+      </div>
     </>
   );
 }
