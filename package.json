@@ -20,7 +20,6 @@
     "serve": "vite preview",
     "lint": "eslint .",
     "lint:fix": "eslint --fix",
-    "predeploy": "yarn build && cp build/index.html build/404.html",
     "deploy": "gh-pages -d build",
     "stylelint": "./node_modules/.bin/stylelint --config .stylelintrc.json \"**/*.scss\"",
     "stylelint:fix": "./node_modules/.bin/stylelint --config .stylelintrc.json \"**/*.scss\" --fix"
