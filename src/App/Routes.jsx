@@ -7,8 +7,10 @@ import About from '../Pages/About';
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<Maintenance />} />
-      <Route path="/about" element={<About />} />
+      <Route path="/react-portfolio">
+        <Route index element={<Maintenance />} />
+        <Route path="about" element={<About />} />
+      </Route>
     </Routes>
   );
 }
