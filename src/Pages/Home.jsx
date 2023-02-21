@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Typewriter from 'typewriter-effect';
 import { introData, meta } from '../content';
+import Eyeball from '../Components/Eyeball';
 
 function Home() {
   return (
@@ -13,8 +14,8 @@ function Home() {
           <title>{meta.title}</title>
           <meta name="description" content={meta.description} />
         </Helmet>
-        <div className="block intro_sec align-center flex-md-row">
-          <div className="flex-grow intro">
+        <div className="flex flex-row justify-center intro_sec align-center">
+          <div className="basis-1/2 intro">
             <p>Start/&gt;</p>
             <h2 className="mb-1x">{introData.title}</h2>
             <h1 className="my-10 text-4xl">
@@ -51,7 +52,10 @@ function Home() {
               </Link>
             </div>
           </div>
-          <div className="flex-grow" />
+          <div className="flex basis-1/2 align-items-center">
+            <Eyeball />
+            <Eyeball />
+          </div>
         </div>
       </section>
     </HelmetProvider>
