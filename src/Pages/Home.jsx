@@ -1,3 +1,4 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Typewriter from 'typewriter-effect';
@@ -12,11 +13,11 @@ function Home() {
           <title>{meta.title}</title>
           <meta name="description" content={meta.description} />
         </Helmet>
-        <div className="intro_sec d-block d-lg-flex align-items-center ">
-          <div className="intro">
-            <p>Start/`&gt; dfd</p>
+        <div className="block intro_sec align-center flex-md-row">
+          <div className="flex-grow intro">
+            <p>Start/&gt;</p>
             <h2 className="mb-1x">{introData.title}</h2>
-            <h1 className="text-3xl underline">
+            <h1 className="my-10 text-4xl">
               <Typewriter
                 options={{
                   strings: [
@@ -31,7 +32,7 @@ function Home() {
               />
             </h1>
             <p className="mb-1x">{introData.description}</p>
-            <div className="intro_btn-action pb-5">
+            <div className="pb-5 intro_btn-action">
               <Link to="/work" className="text_2">
                 <div id="button_p" className="ac_btn btn ">
                   Work
@@ -50,6 +51,7 @@ function Home() {
               </Link>
             </div>
           </div>
+          <div className="flex-grow" />
         </div>
       </section>
     </HelmetProvider>

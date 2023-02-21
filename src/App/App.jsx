@@ -6,6 +6,7 @@ import './App.scss';
 export default function App() {
   return (
     <>
+      <Menu />
       <div className="px-32 py-3">
         <AppRoutes />
       </div>
