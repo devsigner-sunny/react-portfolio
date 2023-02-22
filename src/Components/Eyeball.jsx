@@ -33,9 +33,9 @@ export default function Eyeball() {
 
   return (
 
-    <svg width="108" height="108" className="eye">
-      <circle cx="54" cy="54" r="50" fill="none" stroke="#195cc8" vectorEffect="non-scaling-stroke" strokeWidth="4" className="eyeball" ref={eyeRef} />
-      <circle cx="54" cy="54" r="30" fill="#195cc8" className="pupil" ref={pupilRef} style={styleEye} />
+    <svg width="40" height="40" className="eye">
+      <circle cx="18" cy="18" r="17" fill="none" stroke="#D03E00" vectorEffect="non-scaling-stroke" strokeWidth="2" className="eyeball" ref={eyeRef} />
+      <circle cx="18" cy="18" r="10" fill="#D03E00" className="pupil" ref={pupilRef} style={styleEye} />
     </svg>
 
   );

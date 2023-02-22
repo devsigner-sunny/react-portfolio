@@ -1,4 +1,4 @@
-const logoText = 'Sunny';
+const logoText = 'Sunny Kim';
 const meta = {
   title: 'Sunny Kim',
   description: "I'm Sunny Kim front-end developer with a strong web design background. currently working in Auckland.",
@@ -13,9 +13,9 @@ const socialLinks = {
 const introData = {
   title: 'Nice to see you!',
   animated: {
-    first: 'DEVeloper + deSIGNER',
-    second: "I'm a devsginer",
-    third: 'I love coding and cool design',
+    first: "I'm a devsigner",
+    second: "DEVloper & deSIGNER",
+    third: 'Coding & Design',
   },
   description: 'An experienced Front-end Developer with 3 years of development experience with a strong web design background. \n'
     + '\n'

@@ -2,25 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 @import "../Scss/styles";
+@import "../Scss/variables/typography.scss";
 @import "../Scss/variables/colors";
 @import "../Scss/mixins/link-text-decoration";
 
 
 @layer base {
-  h1 {
-    @apply text-2xl;
+
+  .font__heading {
+    font-family: $font-family-heading;
   }
 
-  h2 {
-    @apply text-xl;
-  }
-
-  .section-title {
-    @apply text-2xl font-bold mb-2;
-  }
-
-  .bg__main {
-    background-color: $bg-light;
+  .font__base {
+    font-family: $font-family-base;
   }
 
   .text__black {
@@ -34,6 +28,44 @@
   .text__link {
     color: $color-link;
   }
+
+  h1 {
+    @apply text-6xl font-black;
+  }
+
+  h2 {
+    @apply text-4xl;
+  }
+
+  h3 {
+    @apply text-3xl;
+  }
+
+  h4 {
+    @apply text-2xl;
+  }
+
+  h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text__heading font__heading;
+  letter-spacing: 1px;
+}
+
+  .bg__main {
+    background-color: $bg-light;
+  }
+
+  body {
+   @apply font__base text-lg;
+   line-height: 1.7em;
+  }
+  
+
+  
 }
 
 :root {
@@ -42,20 +74,6 @@
 
 body {
   background: $bg-light;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  color: $primary-color;
-  font-family: $font-family-heading;
-  letter-spacing: 1px;
-}
-body {
-  font-family: $font-family-base;
 }
 
 a {

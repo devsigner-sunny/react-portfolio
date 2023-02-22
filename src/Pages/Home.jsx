@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { Helmet, HelmetProvider } from 'react-helmet-async';
 import Typewriter from 'typewriter-effect';
 import { introData, meta } from '../content';
-import Eyeball from '../Components/Eyeball';
+import symbolSun from '../Assets/sun.svg';
 
 function Home() {
   return (
@@ -14,11 +13,10 @@ function Home() {
           <title>{meta.title}</title>
           <meta name="description" content={meta.description} />
         </Helmet>
-        <div className="flex flex-row justify-center intro_sec align-center">
-          <div className="basis-1/2 intro">
-            <p>Start/&gt;</p>
-            <h2 className="mb-1x">{introData.title}</h2>
-            <h1 className="my-10 text-4xl">
+        <div className="flex flex-row justify-center min-h-screen align-middle">
+          <div className="flex flex-col justify-center basis-3/4">
+            <h4 className="font-medium text__black mb-1x">{introData.title}</h4>
+            <h1 className="my-10 text-6xl font-black">
               <Typewriter
                 options={{
                   strings: [
@@ -32,29 +30,10 @@ function Home() {
                 }}
               />
             </h1>
-            <p className="mb-1x">{introData.description}</p>
-            <div className="pb-5 intro_btn-action">
-              <Link to="/work" className="text_2">
-                <div id="button_p" className="ac_btn btn ">
-                  Work
-                  <div className="ring one" />
-                  <div className="ring two" />
-                  <div className="ring three" />
-                </div>
-              </Link>
-              <Link to="/contact">
-                <div id="button_h" className="ac_btn btn">
-                  Contact Me
-                  <div className="ring one" />
-                  <div className="ring two" />
-                  <div className="ring three" />
-                </div>
-              </Link>
-            </div>
+            <p className="pr-32 mb-1">{introData.description}</p>
           </div>
-          <div className="flex basis-1/2 align-items-center">
-            <Eyeball />
-            <Eyeball />
+          <div className="flex basis-1/4">
+          <img src={symbolSun} alt="symbol sunny" />
           </div>
         </div>
       </section>
