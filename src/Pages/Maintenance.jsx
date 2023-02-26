@@ -1,6 +1,6 @@
-import React from 'react';
-import Lottie from 'react-lottie-player';
-import lottieJson from '../maintenance.json';
+import React from "react";
+import Lottie from "react-lottie-player";
+import lottieJson from "../maintenance.json";
 
 function Maintenance() {
   return (
@@ -12,10 +12,9 @@ function Maintenance() {
           loop
           animationData={lottieJson}
           play
-          rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
+          rendererSettings={{ preserveAspectRatio: "xMidYMid slice" }}
         />
       </div>
-
     </div>
   );
 }

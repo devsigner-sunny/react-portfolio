@@ -1,7 +1,5 @@
-import React, {
-  useRef, useState, useEffect,
-} from 'react';
-import useMousePosition from '../Hooks/useMousePosition';
+import React, { useRef, useState, useEffect } from "react";
+import useMousePosition from "../Hooks/useMousePosition";
 
 export default function Eyeball() {
   const mousePosition = useMousePosition();
@@ -32,11 +30,27 @@ export default function Eyeball() {
   };
 
   return (
-
-    <svg width="40" height="40" className="eye">
-      <circle cx="18" cy="18" r="17" fill="none" stroke="#D03E00" vectorEffect="non-scaling-stroke" strokeWidth="2" className="eyeball" ref={eyeRef} />
-      <circle cx="18" cy="18" r="10" fill="#D03E00" className="pupil" ref={pupilRef} style={styleEye} />
+    <svg width="38" height="38" className="eye">
+      <circle
+        cx="18"
+        cy="18"
+        r="17"
+        fill="none"
+        stroke="#D03E00"
+        vectorEffect="non-scaling-stroke"
+        strokeWidth="2"
+        className="eyeball"
+        ref={eyeRef}
+      />
+      <circle
+        cx="18"
+        cy="18"
+        r="10"
+        fill="#D03E00"
+        className="pupil"
+        ref={pupilRef}
+        style={styleEye}
+      />
     </svg>
-
   );
 }

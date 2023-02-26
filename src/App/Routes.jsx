@@ -1,8 +1,8 @@
-import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import React from "react";
+import { Route, Routes } from "react-router-dom";
 
-import Home from '../Pages/Home';
-import About from '../Pages/About';
+import Home from "../Pages/Home/Home";
+import About from "../Pages/About/About";
 
 function AppRoutes() {
   return (

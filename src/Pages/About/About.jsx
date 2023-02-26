@@ -1,7 +1,7 @@
-import React from 'react';
-import './About.scss';
-import BrowserContainer from '../Components/BrowserContainer/BrowserContainer';
-import { aboutContents } from '../content';
+import React from "react";
+import "./About.scss";
+import BrowserContainer from "../../Components/BrowserContainer";
+import { aboutContents } from "../../Contents/aboutContents";
 
 function About() {
   return (
@@ -15,12 +15,7 @@ function About() {
               <div className="pt-5 pl-3 codes">
                 {aboutContents.map((content, index) => (
                   <div key={index} data-line-nr={index} className="code d-flex">
-                    {content.dot
-                      && (
-<span className="dot">
-                          {content.dot}
-</span>
-                      )}
+                    {content.dot && <span className="dot">{content.dot}</span>}
                     <span dangerouslySetInnerHTML={{ __html: content.html }} />
                   </div>
                 ))}
