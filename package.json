@@ -1,64 +1,72 @@
 {
-  "name": "react-portfolio",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "animate.css": "^4.1.1",
-    "gh-pages": "^4.0.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-helmet-async": "^1.3.0",
-    "react-icons": "^4.6.0",
-    "react-lottie-player": "^1.5.4",
-    "react-responsive": "^9.0.2",
-    "react-router-dom": "^6.4.2",
-    "sass": "^1.55.0",
-    "typewriter-effect": "^2.19.0",
-    "vite-plugin-env-compatible": "^1.1.1"
-  },
-  "scripts": {
-    "start": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "lint": "eslint .",
-    "lint:fix": "eslint --fix",
-    "gh-deploy": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages",
-    "gh-deploy-init": "git push origin && git subtree push --prefix dist origin gh-pages",
-    "stylelint": "./node_modules/.bin/stylelint --config .stylelintrc.json \"**/*.scss\"",
-    "stylelint:fix": "./node_modules/.bin/stylelint --config .stylelintrc.json \"**/*.scss\" --fix"
-  },
-  "homepage": "http://devsigner-sunny.github.io/react-portfolio",
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.22",
-    "@types/react-dom": "^18.0.7",
-    "@vitejs/plugin-react": "^2.2.0",
-    "autoprefixer": "^10.4.13",
-    "eslint": "^8.26.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-jsx-a11y": "^6.6.1",
-    "eslint-plugin-react": "^7.31.10",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "postcss": "^8.4.18",
-    "stylelint": "^14.14.0",
-    "stylelint-config-sass-guidelines": "^9.0.1",
-    "stylelint-order": "^5.0.0",
-    "tailwindcss": "^3.2.1",
-    "vite": "^3.2.0"
-  }
+	"name": "react-portfolio",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"animate.css": "^4.1.1",
+		"gh-pages": "^4.0.0",
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0",
+		"react-helmet-async": "^1.3.0",
+		"react-icons": "^4.6.0",
+		"react-lottie-player": "^1.5.4",
+		"react-responsive": "^9.0.2",
+		"react-router-dom": "^6.4.2",
+		"sass": "^1.55.0",
+		"typewriter-effect": "^2.19.0"
+	},
+	"scripts": {
+		"start": "vite",
+		"build": "vite build",
+		"serve": "vite preview",
+		"lint": "./node_modules/.bin/eslint src/ --ext jsx",
+		"lint:fix": "./node_modules/.bin/eslint src/ --ext jsx --fix",
+		"gh-deploy": "git push origin :gh-pages && git subtree push --prefix dist origin gh-pages",
+		"gh-deploy-init": "git push origin && git subtree push --prefix dist origin gh-pages",
+		"stylelint": "./node_modules/.bin/stylelint --config .stylelintrc.json \"**/*.scss\"",
+		"stylelint:fix": "./node_modules/.bin/stylelint --config .stylelintrc.json \"**/*.scss\" --fix"
+	},
+	"homepage": "http://devsigner-sunny.github.io/react-portfolio",
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	},
+	"devDependencies": {
+		"@babel/core": "^7.21.0",
+		"@babel/eslint-parser": "^7.19.1",
+		"@babel/preset-react": "^7.18.6",
+		"@types/react": "^18.0.22",
+		"@types/react-dom": "^18.0.7",
+		"@vitejs/plugin-react": "^2.2.0",
+		"autoprefixer": "^10.4.13",
+		"babel-eslint": "8",
+		"eslint": "^8.34.0",
+		"eslint-config-airbnb": "^19.0.4",
+		"eslint-plugin-import": "^2.26.0",
+		"eslint-plugin-jsx-a11y": "^6.6.1",
+		"eslint-plugin-react": "^7.31.10",
+		"eslint-plugin-react-hooks": "^4.6.0",
+		"eslint-config-node": "^4.1.0",
+		"eslint-config-prettier": "^8.6.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"prettier": "^2.8.4",
+		"postcss": "^8.4.18",
+		"stylelint": "^14.14.0",
+		"stylelint-config-sass-guidelines": "^9.0.1",
+		"stylelint-order": "^5.0.0",
+		"tailwindcss": "^3.2.1",
+		"vite": "^3.2.0",
+		"vite-plugin-env-compatible": "^1.1.1"
+	}
 }
