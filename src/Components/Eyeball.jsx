@@ -25,12 +25,12 @@ export default function Eyeball() {
   const angle = (radian * 180) / Math.PI + 360;
 
   const styleEye = {
-    transform: `translateX(${`${R - r + 2}px`}) rotate(${`${angle}deg`})`,
-    transformOrigin: `${`${r + 2}px`} center`,
+    transform: `translateX(${`${R - r}px`}) rotate(${`${angle}deg`})`,
+    transformOrigin: `${`${r}px`} center`,
   };
 
   return (
-    <svg width="38" height="38" className="eye">
+    <svg width="36" height="36" className="eye">
       <circle
         cx="18"
         cy="18"
