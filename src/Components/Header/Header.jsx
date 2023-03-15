@@ -2,7 +2,7 @@ import React, { useState, useRef, useLayoutEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
-import { logoText, socialLinks } from "../../Contents/siteContents";
+import { logoText, introData, socialLinks } from "../../Contents/siteContents";
 import Menu from "./Menu";
 import Eyeball from "../Eyeball";
 import "./Header.scss";
@@ -30,9 +30,10 @@ function Header() {
     setActive(!isActive);
   };
 
-  const headerClasses = ["px-32", "bg__main", "fixed", "w-full", "z-50"];
+  const headerClasses = ["px-32", "bg__main", "fixed", "w-full", "z-50","transition-all" ];
 
   if (isSticky) {
+    headerClasses.shift('px-32');
     headerClasses.push("sticky px-10");
   }
 
@@ -41,14 +42,14 @@ function Header() {
       <div className="flex items-center justify-between w-full">
         <div className="flex flex-col px-3 py-1">
           <Link
-            className="my-2 text-xl font-semibold font__heading text__primary"
+            className='my-2 text-xl font-semibold font__heading text__primary'
             to="/react-portfolio"
           >
             {logoText}
           </Link>
           {!isSticky && (
             <small className="text-xs">
-              Creative Developer, based in Auckland
+              Creative Developer, based in Auckland, New Zealand
             </small>
           )}
         </div>
@@ -61,7 +62,7 @@ function Header() {
           </div>
         ) : (
           <>
-            <div className="absolute flex top-3 eyeball__container left-1/2">
+            <div className="absolute flex -translate-x-1/2 -translate-y-1/2 top-1/2 eyeball__container left-1/2">
               <Eyeball />
               <Eyeball />
             </div>

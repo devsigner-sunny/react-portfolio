@@ -34,15 +34,15 @@ header {
 }
 
 .site__navigation {
-  height: 0;
   overflow: hidden;
   visibility: hidden;
   width: 100%;
+  height: 0;
 
   &.visible {
-    min-height: calc(100vh - 4rem);
     position: absolute;
     z-index: 1;
+    min-height: calc(100vh - 4rem);
     ;
 
     .menus__wrapper {
@@ -50,7 +50,6 @@ header {
     }
   }
 }
-
 
 .menus__wrapper {
   left: 0;
@@ -75,8 +74,4 @@ header {
 
 .menus__footer {
   margin-bottom: 20vh;
-}
-
-.eyeball__container {
-  transform: translateX(-50%);
 }
