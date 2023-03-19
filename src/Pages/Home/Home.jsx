@@ -4,8 +4,8 @@ import Typewriter from "typewriter-effect";
 import { introData, meta } from "../../Contents/siteContents";
 import symbolSun from "../../Assets/svg/sun.svg";
 import symbolFinger from "../../Assets/svg/finger.svg";
-import Projects from "../../Components/Projects/Projects";
 import "./Home.scss";
+import ProjectThumbList from "../../Components/Projects/ProjectThumbList";
 
 function Home() {
   return (
@@ -19,7 +19,7 @@ function Home() {
         <section className="flex flex-row justify-center min-h-screen home">
           <div className="flex flex-col justify-center basis-3/4">
             <h4 className="font-medium text__black mb-1x">{introData.title}</h4>
-            <h1 className="my-10 text-6xl text__primary">
+            <h1 className="my-10 text__primary">
               <Typewriter
                 options={{
                   strings: [
@@ -48,10 +48,17 @@ function Home() {
           </div>
         </section>
 
-        <section className="flex flex-col">
-          <h2 className="text-center mb-14">Selected Projects</h2>
-          <Projects />
+        <section className="flex flex-col selected-works">
+          <div className="title-wrapper">
+            <h4>Selected</h4>
+            <h2 className="text-center uppercase text-8xl">Works</h2>
+          </div>
+          <ProjectThumbList />
         </section>
+        <div className="mb-32"></div>
+        <div className="pb-32"></div>
+        <div className="pb-60"></div>
+      
       </main>
     </HelmetProvider>
   );

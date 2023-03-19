@@ -1,0 +1,66 @@
+.box {
+	width: 100px;
+	height: 100px;
+	border-radius: 12px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: green;
+	font-weight: 600;
+	color: white;
+}
+
+.circle {
+	width: 100px;
+	height: 100px;
+	border-radius: 99%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	background-color: purple;
+	font-weight: 600;
+	color: green;
+}
+
+.project-thumb {
+	
+	.image-effect {
+		transition:all 1s ease;
+
+	}
+}
+
+.project-thumb:hover {
+	.image-effect {
+		opacity: 1;
+	}
+}
+
+
+.keyword-list {
+	position: relative;
+	white-space: nowrap;
+	width: 100%;
+	height: 3em;
+	overflow: hidden;
+	will-change: transform;
+}
+
+.keyword-list-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	white-space: nowrap;
+	animation: flows 50s linear infinite;
+}
+
+@keyframes flows {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(-50%);
+	}
+}

@@ -13,7 +13,6 @@ const socialLinks = {
 
 const introData = {
 	title: 'Kia Ora!',
-	slogan: 'Creative Developer, based in Auckland',
 	animated: {
 		first: "I'm a devsigner.",
 		second: 'DEVloper & deSIGNER',
