@@ -1,21 +1,21 @@
-@import '../../Scss/variables/colors';
-@import '../../Scss/variables/typography';
-@import '../../Scss/variables/default-variables';
-@import '../../Scss/mixins/link-text-decoration';
+@import "../../Scss/variables/colors";
+@import "../../Scss/variables/typography";
+@import "../../Scss/variables/default-variables";
+@import "../../Scss/mixins/link-text-decoration";
 
 .section-cta {
-	left: 50%;
-	margin-left: -50vw;
-	margin-right: -50vw;
-	position: relative;
-	right: 50%;
-	width: 100vw;
-	margin-bottom: -10rem;
-	background-position: calc(100% - 2.5rem) -20%;
-	background-size: 17em;
-	border-top: 10px solid $primary-color;
+  background-position: calc(100% - 2.5rem) -20%;
+  background-size: 17em;
+  border-top: 10px solid $primary-color;
+  left: 50%;
+  margin-bottom: -10rem;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  position: relative;
+  right: 50%;
+  width: 100vw;
 }
 
 .img-finger {
-	--animate-duration: 6s;
+  --animate-duration: 6s;
 }

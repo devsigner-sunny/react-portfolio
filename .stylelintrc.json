@@ -4,6 +4,7 @@
     "stylelint-order"
   ],
   "rules": {
+    "selector-no-qualifying-type": null,
     "scss/at-rule-no-unknown": null,
     "comment-empty-line-before": "never",
     "comment-no-empty": true,

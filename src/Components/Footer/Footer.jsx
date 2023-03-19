@@ -10,7 +10,7 @@ function Footer() {
   const socialLinkList = Object.entries(socialLinks);
   return (
     <footer
-      className="flex items-end p-20 mt-10 bg-no-repeat section-cta bg__dark"
+      className="flex items-end p-20 mt-10 bg-gray-900 bg-no-repeat section-cta"
       style={{
         backgroundImage: `url(${symbolMoon})`,
       }}

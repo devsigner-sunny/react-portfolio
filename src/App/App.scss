@@ -1,120 +1,121 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import '../Scss/styles';
-@import '../Scss/variables/typography';
-@import '../Scss/variables/colors';
-@import '../Scss/mixins/link-text-decoration';
+@import "../Scss/styles";
+@import "../Scss/variables/typography";
+@import "../Scss/variables/colors";
+@import "../Scss/mixins/link-text-decoration";
 
 @layer base {
-	.font__heading {
-		font-family: $font-family-heading;
-	}
+  .font__heading {
+    font-family: $font-family-heading;
+  }
 
-	.font__base {
-		font-family: $font-family-base;
-	}
+  .font__base {
+    font-family: $font-family-base;
+  }
 
-	.text__black {
-		color: $black;
-	}
+  .text__black {
+    color: $black;
+  }
 
-	.text__primary {
-		color: $color-primary;
-	}
+  .text__primary {
+    color: $color-primary;
+  }
 
-	.text__secondary {
-		color: $secondary-color;
-	}
+  .text__secondary {
+    color: $secondary-color;
+  }
 
-	.text__light {
-		color: $ivory;
-	}
+  .text__light {
+    color: $ivory;
+  }
 
-	.text__link {
-		color: $color-link;
-	}
+  .text__link {
+    color: $color-link;
+  }
 
-	.text__ivory {
-		color: $color-ivory;
-	}
+  .text__ivory {
+    color: $color-ivory;
+  }
 
-	.decoration-primary {
-		@apply decoration-wavy;
-		text-decoration-color: $primary-color;
-	}
+  .decoration-primary {
+    @apply decoration-wavy;
+    text-decoration-color: $primary-color;
+  }
 
-	h1 {
-		@apply text-6xl font-black;
-	}
+  h1 {
+    @apply text-6xl font-black;
+  }
 
-	h2 {
-		@apply text-5xl font-bold;
-	}
+  h2 {
+    @apply text-5xl font-bold;
+  }
 
-	h3 {
-		@apply text-3xl font-semibold;
-	}
+  h3 {
+    @apply text-3xl font-semibold;
+  }
 
-	h4 {
-		@apply text-2xl;
-	}
+  h4 {
+    @apply text-2xl;
+  }
 
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		@apply font__heading;
-		letter-spacing: 1px;
-	}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font__heading;
+    letter-spacing: 1px;
+  }
 
-	.bg__main {
-		background-color: $bg-light;
-	}
+  .bg__main {
+    background-color: $bg-light;
+  }
 
-	.bg__primary {
-		background-color: $primary-color;
-	}
+  .bg__primary {
+    background-color: $primary-color;
+  }
 
-	.bg__secondary {
-		background-color: $secondary-color;
-	}
+  .bg__secondary {
+    background-color: $secondary-color;
+  }
 
-	.bg__dark {
-		background-color: $bg-black;
-	}
+  .bg__dark {
+    background-color: $bg-black;
+  }
 
-	body {
-		@apply font__base text-lg;
-		line-height: 1.7em;
-	}
+  body {
+    @apply font__base text-lg;
+    line-height: 1.7em;
+  }
 
-	section {
-		@apply md:py-16;
-	}
+  section {
+    @apply md:py-16;
+  }
 }
 
 :root {
-	--animate-duration: 4s;
-	--animate-delay: 0.9s;
-	accent-color: $primary-color;
+  --animate-duration: 4s;
+  --animate-delay: 0.9s;
+  accent-color: $primary-color;
+  color: #111827;
 }
 
 body {
-	background: $bg-light;
-	overflow-x: hidden;
+  background: $bg-light;
+  overflow-x: hidden;
 }
 
 a {
-	// color: $color-link;
-	// text-decoration: none;
-	transform: all 0.5s ease-in;
+  // color: $color-link;
+  // text-decoration: none;
+  transform: all 0.5s ease-in;
 
-	&:hover {
-		opacity: 0.8;
-		// @include link-text-decoration();
-		// color: $color-text;
-	}
+  &:hover {
+    opacity: 0.8;
+    // @include link-text-decoration();
+    // color: $color-text;
+  }
 }
