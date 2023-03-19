@@ -1,15 +1,17 @@
-import React, { useState, useRef, useLayoutEffect } from "react";
-import symbolMoon from "../../Assets/svg/moon.svg";
-import symbolFingerLight from "../../Assets/svg/finger-light.svg";
-import { socialLinks } from "../../Contents/siteContents";
+import symbolMoon from "../../../Assets/svg/moon.svg";
+import symbolFingerLight from "../../../Assets/svg/finger-light.svg";
+import { socialLinks } from "../../../Contents/siteContents";
+import { useNav } from "../../../Hooks/useNav";
 import "./Footer.scss";
 
 function Footer() {
-  // console.log(`:`, Object.values(socialLinks));
-  console.log(`:`, Object.entries(socialLinks)[0][0]);
   const socialLinkList = Object.entries(socialLinks);
+  const contactRef = useNav("Contact");
+
   return (
     <footer
+      ref={contactRef}
+      id="contact"
       className="flex items-end p-20 mt-10 bg-gray-900 bg-no-repeat section-cta"
       style={{
         backgroundImage: `url(${symbolMoon})`,

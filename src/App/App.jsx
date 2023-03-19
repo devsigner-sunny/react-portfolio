@@ -1,18 +1,16 @@
 import React from "react";
-import AppRoutes from "./Routes";
-import { ParallaxProvider } from "react-scroll-parallax";
-import Header from "../Components/Header/Header";
-import Footer from "../Components/Footer/Footer";
+import Main from "./Layout/Main";
+import Header from "./Layout/Header/Header";
+import Footer from "./Layout/Footer/Footer";
 import "./App.scss";
+import NavProvider from "../Context/NavContext";
 
 export default function App() {
   return (
-    <ParallaxProvider>
+    <NavProvider>
       <Header />
-      <div className="px-32 py-20">
-        <AppRoutes />
-      </div>
+      <Main />
       <Footer />
-    </ParallaxProvider>
+    </NavProvider>
   );
 }

@@ -1,13 +1,19 @@
 import React from "react";
-import ProjectThumb from "./ProjectThumb";
-import { featureProjects } from "../../Contents/projectContents";
+import ProjectThumb from "../Components/Projects/ProjectThumb";
+import { featureProjects } from "../Contents/projectContents";
+import { useNav } from "../Hooks/useNav";
 
-export default function ProjectThumbList() {
+export default function Work() {
+  const workRef = useNav("Work");
+
   const projectList = Object.values(featureProjects);
   return (
-    <div>
+    <section ref={workRef} id="work">
       {projectList.map(
-        ({ link, title, desc, tags, keywords, image, responsibilities }, index) => (
+        (
+          { link, title, desc, tags, keywords, image, responsibilities },
+          index
+        ) => (
           <ProjectThumb
             key={index}
             {...{
@@ -23,6 +29,6 @@ export default function ProjectThumbList() {
           />
         )
       )}
-    </div>
+    </section>
   );
 }

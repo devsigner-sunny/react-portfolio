@@ -1,7 +1,7 @@
-@import "../../Scss/variables/colors";
-@import "../../Scss/variables/typography";
-@import "../../Scss/variables/default-variables";
-@import "../../Scss/mixins/link-text-decoration";
+@import "../../../Scss/variables/colors.scss";
+@import "../../../Scss/variables/typography";
+@import "../../../Scss/variables/default-variables";
+@import "../../../Scss/mixins/link-text-decoration";
 
 .section-cta {
   background-position: calc(100% - 2.5rem) -20%;
