@@ -1,22 +1,7 @@
-@import "../../Scss/variables/typography";
 @import "../../Scss/variables/colors";
 
 .about {
-  .code-view {
-    color: $white;
-
-    font-family: $font-family-mono;
-  }
-
   .codes {
     border-left: 1px solid $primary-color;
-
-    .name,
-    .method {
-      color: #eeff31;
-    }
-    .prop {
-      color: $orange;
-    }
   }
 }

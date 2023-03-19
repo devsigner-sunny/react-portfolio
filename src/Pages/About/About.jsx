@@ -6,17 +6,20 @@ import { aboutContents } from "../../Contents/aboutContents";
 function About() {
   return (
     <div>
-      <h1>About</h1>
       <div id="about" className="about page">
         <BrowserContainer>
           <div className="p-5 bg-gray-900">
-            <small className="text-white">About /&gt;</small>
-            <div className="code-view">
-              <div className="pt-5 pl-3 codes">
+            <small className="text__primary">About /&gt;</small>
+            <div className="code-view text__light font__mono">
+              <div className="pt-5 pl-3 ml-10 codes">
                 {aboutContents.map((content, index) => (
-                  <div key={index} data-line-nr={index} className="code d-flex">
-                    {content.dot && <span className="dot">{content.dot}</span>}
-                    <span dangerouslySetInnerHTML={{ __html: content.html }} />
+                  <div key={index} className="relative pl-3 text-base code">
+                    <div className="d-flex">
+                      <span className="absolute top-0 text-gray-500 -left-12">{String(index+1).padStart(2, '0')}</span>
+                    {content.dot && <span className="inline text-gray-500">{content.dot}</span>}
+                    <span className="inline" dangerouslySetInnerHTML={{ __html: content.html }} />
+                    </div>
+                   
                   </div>
                 ))}
               </div>
