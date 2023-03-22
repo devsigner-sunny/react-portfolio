@@ -15,6 +15,10 @@
     font-family: $font-family-base;
   }
 
+  .font__mono {
+    font-family: $font-family-mono;
+  }
+
   .text__black {
     color: $black;
   }
@@ -74,6 +78,10 @@
     background-color: $bg-light;
   }
 
+  .bg__light {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
   .bg__primary {
     background-color: $primary-color;
   }
@@ -82,8 +90,22 @@
     background-color: $secondary-color;
   }
 
+  .border__light {
+    border-color: $ivory;
+  }
+
+  .border__primary {
+    border-color: $primary-color;
+  }
+
   .bg__dark {
     background-color: $bg-black;
+  }
+
+	
+
+  .transform__x-y-center {
+    transform: translate(-50%, -50%);
   }
 
   body {
@@ -101,6 +123,11 @@
   --animate-delay: 0.9s;
   accent-color: $primary-color;
   color: #111827;
+  cursor: none;
+}
+
+* {
+  cursor: none !important;
 }
 
 body {
@@ -114,7 +141,7 @@ a {
   transform: all 0.5s ease-in;
 
   &:hover {
-    opacity: 0.8;
+    // opacity: 0.8;
     // @include link-text-decoration();
     // color: $color-text;
   }

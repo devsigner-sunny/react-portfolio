@@ -18,7 +18,7 @@ function Menu() {
     };
 
     return (
-      <li className="p-4 font-semibold text-center">
+      <li key={content} className="p-4 font-semibold text-center">
         <NavLink
           to={`#${content}`}
           onClick={handleClickNav}

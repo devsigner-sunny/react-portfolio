@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectThumb from "../Components/Projects/ProjectThumb";
+import SectionTitle from "../Components/SectionTitle/SectionTitle";
 import { featureProjects } from "../Contents/projectContents";
 import { useNav } from "../Hooks/useNav";
 
@@ -9,6 +10,7 @@ export default function Work() {
   const projectList = Object.values(featureProjects);
   return (
     <section ref={workRef} id="work">
+      <SectionTitle />
       {projectList.map(
         (
           { link, title, desc, tags, keywords, image, responsibilities },

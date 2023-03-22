@@ -1,0 +1,14 @@
+@import "../../Scss/variables/colors";
+
+.title-wrapper {
+  position: absolute;
+  right: 0;
+  transform: rotate(-90deg) translateX(-35%) translateY(calc(100% - 0.5em));
+  transform-origin: top;
+
+  h2 {
+    -webkit-text-fill-color: $ivory;
+    -webkit-text-stroke-color: $primary-color;
+    -webkit-text-stroke-width: 2px;
+  }
+}

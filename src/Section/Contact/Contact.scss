@@ -1,0 +1,11 @@
+@import "../../Scss/variables/colors";
+
+.section-cta {
+  background-position: calc(100% - 2.5rem) -20%;
+  background-size: 17em;
+  border-top: 10px solid $primary-color;
+}
+
+.img-finger {
+  --animate-duration: 6s;
+}
