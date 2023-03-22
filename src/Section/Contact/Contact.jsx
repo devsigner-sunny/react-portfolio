@@ -12,7 +12,7 @@ export default function Contact() {
     <section
       ref={contactRef}
       id="contact"
-      className="flex items-end px-10 py-20 mt-10 bg-no-repeat bg__primary section-cta"
+      className="flex items-end px-10 py-20 mt-10 bg-no-repeat bg-slate-900 section-contact"
       style={{
         backgroundImage: `url(${symbolMoon})`,
       }}

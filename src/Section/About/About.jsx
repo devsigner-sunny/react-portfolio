@@ -1,18 +1,19 @@
 import React from "react";
 import { useNav } from "../../Hooks/useNav";
-import "./About.scss";
 import BrowserContainer from "../../Components/BrowserContainer";
 import { aboutContents } from "../../Contents/aboutContents";
+import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 
-function About() {
+export default function About() {
   const aboutRef = useNav("About");
   return (
-    <section ref={aboutRef} id="about">
+    <section ref={aboutRef} id="about" className="px-20">
+      <SectionTitle title="About me" />
       <BrowserContainer>
         <div className="p-5 bg-gray-900">
-          <small className="text__primary">About /&gt;</small>
+          <small className="text-rose-500">About /&gt;</small>
           <div className="code-view text__light font__mono">
-            <div className="pt-5 pl-3 ml-10 codes">
+            <div className="pl-3 ml-10 border-l-2 border-slate-400">
               {aboutContents.map((content, index) => (
                 <div key={index} className="relative pl-3 text-base code">
                   <div className="d-flex">
@@ -38,4 +39,3 @@ function About() {
     </section>
   );
 }
-export default About;

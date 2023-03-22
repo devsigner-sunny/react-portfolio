@@ -5,7 +5,7 @@ export const useOnScreen = (ref) => {
 
   const observer = new IntersectionObserver(
     ([entry]) => {
-      console.log(entry);
+      console.log(`entry::`, entry);
       setIsOnScreen(entry.isIntersecting);
     },
     {

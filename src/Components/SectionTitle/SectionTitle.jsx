@@ -1,10 +1,13 @@
 import "./SectionTitle.scss";
 
-export default function SectionTitle() {
+export default function SectionTitle({ isRight = false, title }) {
   return (
-    <div className="title-wrapper">
-      <h4>Selected</h4>
-      <h2 className="text-center uppercase text-8xl">Works</h2>
+    <div
+      className={`section-title absolute origin-top ${
+        isRight ? "right" : "left"
+      }`}
+    >
+      <h2 className="text-center uppercase opacity-60 text-8xl">{title}</h2>
     </div>
   );
 }

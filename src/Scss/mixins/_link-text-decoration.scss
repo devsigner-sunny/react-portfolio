@@ -1,7 +1,0 @@
-@import "../variables/colors";
-
-@mixin link-text-decoration($color: $primary-color) {
-  text-decoration: underline;
-  text-decoration-color: $color;
-  text-decoration-style: wavy;
-}

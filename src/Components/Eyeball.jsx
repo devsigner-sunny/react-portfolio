@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect } from "react";
 import useMousePosition from "../Hooks/useMousePosition";
 
-export default function Eyeball() {
+export default function Eyeball({ color }) {
   const mousePosition = useMousePosition();
   const [eyePosition, setEyePosition] = useState(0);
   const eyeRef = useRef(null);
@@ -35,8 +35,8 @@ export default function Eyeball() {
         cx="18"
         cy="18"
         r="17"
-        fill="none"
-        stroke="#D03E00"
+        fill="#F3e1b9"
+        stroke="#059669"
         vectorEffect="non-scaling-stroke"
         strokeWidth="2"
         className="eyeball"
@@ -46,7 +46,7 @@ export default function Eyeball() {
         cx="18"
         cy="18"
         r="10"
-        fill="#D03E00"
+        fill={color}
         className="pupil"
         ref={pupilRef}
         style={styleEye}

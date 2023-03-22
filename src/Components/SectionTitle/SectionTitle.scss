@@ -1,14 +1,22 @@
 @import "../../Scss/variables/colors";
 
-.title-wrapper {
-  position: absolute;
-  right: 0;
-  transform: rotate(-90deg) translateX(-35%) translateY(calc(100% - 0.5em));
-  transform-origin: top;
+.section-title {
+
+
+  &.right {
+    right: 0;
+    transform: rotate(-90deg) translateX(-35%) translateY(290%);
+  }
+
+  &.left {
+    left: 0;
+    transform: rotate(90deg) translateX(50%) translateY(380%);
+  }
 
   h2 {
-    -webkit-text-fill-color: $ivory;
-    -webkit-text-stroke-color: $primary-color;
+    -webkit-text-fill-color: $light;
+    text-shadow: 8px 5px 0 $dark-ivory;
+    -webkit-text-stroke-color: $primary;
     -webkit-text-stroke-width: 2px;
   }
 }

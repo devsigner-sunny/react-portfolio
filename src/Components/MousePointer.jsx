@@ -9,6 +9,7 @@ const MouseCircle = forwardRef(({ className, delay }, ref) => {
     "left-0",
     "fixed",
     "rounded-full",
+    "pointer-events-none",
     "transform__x-y-center",
     "border-2",
   ];
@@ -64,17 +65,17 @@ export default function MousePointer() {
   return (
     <div>
       <MouseCircle
-        className="z-50 w-3.5 h-3.5 bg__primary"
+        className="z-50 w-3.5 h-3.5 bg-amber-600 border__light"
         ref={addCircleRef}
         delay={0}
       />
       <MouseCircle
-        className="z-40 w-10 h-10 border__light opacity-30 bg__primary"
+        className="z-40 w-10 h-10 border__light opacity-30 bg-amber-500"
         ref={addCircleRef}
         delay={0.1}
       />
       <MouseCircle
-        className="z-30 w-20 h-20 border__primary bg__light"
+        className="z-30 w-16 h-16 border-amber-400 bg__dark-ivory"
         ref={addCircleRef}
         delay={0.2}
       />

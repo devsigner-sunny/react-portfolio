@@ -15,7 +15,7 @@ const introData = {
 	title: 'Kia Ora!',
 	animated: {
 		first: "I'm a devsigner.",
-		second: 'DEVloper & deSIGNER',
+		second: 'DEVeloper & deSIGNER',
 		third: 'Coding & Design',
 	},
 	description:

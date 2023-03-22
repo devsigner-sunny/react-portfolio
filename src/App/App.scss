@@ -4,7 +4,7 @@
 @import "../Scss/styles";
 @import "../Scss/variables/typography";
 @import "../Scss/variables/colors";
-@import "../Scss/mixins/link-text-decoration";
+
 
 @layer base {
   .font__heading {
@@ -19,33 +19,8 @@
     font-family: $font-family-mono;
   }
 
-  .text__black {
-    color: $black;
-  }
-
-  .text__primary {
-    color: $color-primary;
-  }
-
-  .text__secondary {
-    color: $secondary-color;
-  }
-
   .text__light {
-    color: $ivory;
-  }
-
-  .text__link {
-    color: $color-link;
-  }
-
-  .text__ivory {
-    color: $color-ivory;
-  }
-
-  .decoration-primary {
-    @apply decoration-wavy;
-    text-decoration-color: $primary-color;
+    color: $light;
   }
 
   h1 {
@@ -74,35 +49,17 @@
     letter-spacing: 1px;
   }
 
-  .bg__main {
-    background-color: $bg-light;
-  }
-
   .bg__light {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: $light;
   }
 
-  .bg__primary {
-    background-color: $primary-color;
-  }
-
-  .bg__secondary {
-    background-color: $secondary-color;
+  .bg__light_trans {
+    background-color: opacify($light, 0.2);;
   }
 
   .border__light {
-    border-color: $ivory;
+    border-color: $light;
   }
-
-  .border__primary {
-    border-color: $primary-color;
-  }
-
-  .bg__dark {
-    background-color: $bg-black;
-  }
-
-	
 
   .transform__x-y-center {
     transform: translate(-50%, -50%);
@@ -113,36 +70,22 @@
     line-height: 1.7em;
   }
 
-  section {
-    @apply md:py-16;
+  section:not(.home) {
+    @apply md:py-16 relative;
   }
+}
+
+* {
+  cursor: none;
 }
 
 :root {
   --animate-duration: 4s;
   --animate-delay: 0.9s;
-  accent-color: $primary-color;
-  color: #111827;
-  cursor: none;
-}
-
-* {
-  cursor: none !important;
+  accent-color: #059669;
+  @apply text-slate-900;
 }
 
 body {
-  background: $bg-light;
-  overflow-x: hidden;
-}
-
-a {
-  // color: $color-link;
-  // text-decoration: none;
-  transform: all 0.5s ease-in;
-
-  &:hover {
-    // opacity: 0.8;
-    // @include link-text-decoration();
-    // color: $color-text;
-  }
+  @apply bg__light overflow-x-hidden;
 }

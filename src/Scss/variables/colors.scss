@@ -1,16 +1,8 @@
-$blue: #195cc8;
-$orange: #d03e00;
-$green: #148671;
 $ivory: #f3e1b9;
+$dark-ivory: darken($ivory, 30%);
 $white: #fff;
-$black: #111827;
+$light: $ivory;
+$primary: #059669;
 
-$primary-color: $orange;
-$secondary-color: $green;
-$bg-light: $ivory;
-$bg-black: $black;
 
-$color-text: $black;
-$color-primary: $primary-color;
-$color-ivory: $ivory;
-$color-link: $primary-color;
+

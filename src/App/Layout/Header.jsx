@@ -1,9 +1,8 @@
 import React, { useState, useRef, useLayoutEffect } from "react";
 import { NavLink } from "react-router-dom";
-import { logoText } from "../../../Contents/siteContents";
-import Menu from "../../../Components/Menu";
-import Eyeball from "../../../Components/Eyeball";
-import "./Header.scss";
+import { logoText } from "../../Contents/siteContents";
+import Menu from "../../Components/Menu";
+import Eyeball from "../../Components/Eyeball";
 
 function Header() {
   const [isSticky, setIsSticky] = useState("false");
@@ -31,24 +30,29 @@ function Header() {
     "bg__main",
     "fixed",
     "w-full",
-    "z-50",
+    "z-10",
     "transition-all",
   ];
 
   if (isSticky) {
     headerClasses.shift("px-32");
-    headerClasses.push("sticky px-10");
+    headerClasses.push("fixed w-100 px-10 bg-emerald-600");
   }
 
   return (
     <header className={headerClasses.join(" ")} ref={headerRef}>
       <div className="flex items-center justify-between w-full">
-        <div className="flex flex-col px-3 py-1">
+        <div className="flex flex-col py-1">
           <h1
-            className="my-2 text-xl font-semibold font__heading text__primary"
+            className="my-2 text-xl font-semibold font__heading"
             onClick={handleClickLogo}
           >
-            <NavLink to="/">{logoText}</NavLink>
+            <NavLink
+              to="/"
+              className={isSticky ? "text__light" : "text-emerald-600"}
+            >
+              {logoText}
+            </NavLink>
           </h1>
           {!isSticky && (
             <small className="text-xs">
@@ -58,10 +62,10 @@ function Header() {
         </div>
 
         <div className="absolute flex -translate-x-1/2 -translate-y-1/2 top-1/2 eyeball__container left-1/2">
-          <Eyeball />
-          <Eyeball />
+          <Eyeball color={isSticky ? "#0f172a" : "#059669"} />
+          <Eyeball color={isSticky ? "#0f172a" : "#059669"} />
         </div>
-        <Menu />
+        <Menu className={isSticky ? "text__light" : "text-gray-900"} />
       </div>
     </header>
   );
