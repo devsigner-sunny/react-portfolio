@@ -49,6 +49,10 @@
     letter-spacing: 1px;
   }
 
+  small {
+    @apply text-xs break-words;
+  }
+
   .bg__light {
     background-color: $light;
   }
@@ -66,12 +70,14 @@
   }
 
   body {
-    @apply font__base text-lg;
+    @apply font__base text-lg overflow-x-hidden;
     line-height: 1.7em;
   }
 
-  section:not(.home) {
-    @apply md:py-16 relative;
+  section {
+    &:not(:last-child) {
+      @apply py-10 md:py-16 relative;
+    }
   }
 }
 
@@ -80,10 +86,12 @@
 }
 
 :root {
-  --animate-duration: 4s;
-  --animate-delay: 0.9s;
   accent-color: #059669;
   @apply text-slate-900;
+}
+
+section {
+  overflow-x: hidden;
 }
 
 body {

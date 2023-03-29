@@ -1,33 +1,29 @@
 import React from "react";
-import BrowserContainer from "../BrowserContainer";
-import "./Project.scss";
+import { VscLinkExternal } from "react-icons/vsc";
+import "./ProjectThumb.scss";
 
 export default function Project({ ...props }) {
-  const { image, title, desc, link, tags } = props;
+  const { title, keywords, link } = props;
 
   return (
     <a
-      className="flex gap-10 project"
       href={link}
       target="_blank"
       rel="noopener noreferrer"
+      className="relative inline-block xl:my-20"
     >
-      <BrowserContainer>
-        <img src={image} className="object-cover object-center w-full h-full" />
-      </BrowserContainer>
-      <div className="project-contents">
-        <h3 className="my-2 font-semibold">{title}</h3>
-        <ul className="flex my-2">
-          {tags.map((tag, index) => (
-            <li
-              key={index}
-              className="px-2 py-1 m-1 text-sm rounded-md bg__secondary text__ivory"
-            >
-              #{tag}
-            </li>
+      <h2 className="inline text-2xl uppercase sm:text-5xl md:text-6xl xl:text-8xl">
+        {title}
+      </h2>
+      <VscLinkExternal className="inline mb-4 ml-2 text-xl lg:text-3xl" />
+      <div className="keyword-list">
+        <div className="keyword-list-container">
+          {keywords.map((keyword, index) => (
+            <span key={index} className="px-2 text-emerald-600 keyword">
+              #{keyword}
+            </span>
           ))}
-        </ul>
-        <p>{desc}</p>
+        </div>
       </div>
     </a>
   );

@@ -12,6 +12,7 @@ export default function ImageEffect({ className, imgSrc }) {
           height: "100%",
           backgroundSize: "cover",
           backgroundPosition: "center",
+          pinterEvent: "none"
         }}
         dropRadius={50}
         perturbance={0.05}

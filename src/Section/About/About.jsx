@@ -7,9 +7,9 @@ import SectionTitle from "../../Components/SectionTitle/SectionTitle";
 export default function About() {
   const aboutRef = useNav("About");
   return (
-    <section ref={aboutRef} id="about" className="px-20">
+    <section ref={aboutRef} id="about" className="px-6 lg:px-10 xl:px-20">
       <SectionTitle title="About me" />
-      <BrowserContainer>
+      <BrowserContainer className="animate__animated animate__slideInRight">
         <div className="p-5 bg-gray-900">
           <small className="text-rose-500">About /&gt;</small>
           <div className="code-view text__light font__mono">
@@ -26,7 +26,7 @@ export default function About() {
                       </span>
                     )}
                     <span
-                      className="inline"
+                      className="inline break-all"
                       dangerouslySetInnerHTML={{ __html: content.html }}
                     />
                   </div>

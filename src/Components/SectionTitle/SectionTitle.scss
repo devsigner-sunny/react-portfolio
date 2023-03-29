@@ -1,18 +1,6 @@
 @import "../../Scss/variables/colors";
 
 .section-title {
-
-
-  &.right {
-    right: 0;
-    transform: rotate(-90deg) translateX(-35%) translateY(290%);
-  }
-
-  &.left {
-    left: 0;
-    transform: rotate(90deg) translateX(50%) translateY(380%);
-  }
-
   h2 {
     -webkit-text-fill-color: $light;
     text-shadow: 8px 5px 0 $dark-ivory;

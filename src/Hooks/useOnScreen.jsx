@@ -5,11 +5,10 @@ export const useOnScreen = (ref) => {
 
   const observer = new IntersectionObserver(
     ([entry]) => {
-      console.log(`entry::`, entry);
       setIsOnScreen(entry.isIntersecting);
     },
     {
-      threshold: 0.7,
+      threshold: [0, 0.3, 1],
     }
   );
 

@@ -1,14 +1,15 @@
-.project-thumb {
-	
-  .image-effect {
-    transition: all 1s ease;
 
-  }
+.image-effect {
+  transition: all 1s ease;
+  animation: fadein;
+  animation-duration: 0.5s;
+    
 }
 
-.project-thumb:hover {
+.project-wrapper:hover {
   .image-effect {
-    opacity: 1;
+    opacity: 0.9;
+  
   }
 }
 

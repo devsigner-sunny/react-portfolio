@@ -2,7 +2,7 @@
 import { gsap } from "gsap";
 import { useEffect, useRef, useLayoutEffect } from "react";
 
-const GsapSun = () => {
+const GsapSun = ({className}) => {
   const sun = useRef(null);
   const tl = useRef();
   const faceRef = useRef();
@@ -19,10 +19,10 @@ const GsapSun = () => {
         })
         .from(".face", { opacity: 0 })
 
-        .to(".entire", { autoAlpha: 1, scale: 1.5, x: 0, duration: 2 })
+        .to(".entire", { autoAlpha: 1, scale: 1.5, x: 0, duration: 1 })
         .to(".sun", {
           transformOrigin: "center center",
-          duration: 2,
+          duration: 0.5,
           rotate: 180,
         })
         .to(".face", { opacity: 1, duration: 1 });
@@ -70,8 +70,9 @@ const GsapSun = () => {
   // })
 
   return (
-    <div ref={sun}>
+    <div ref={sun} className={className}>
       <svg
+        className="w-100 h-100"
         width="349"
         height="349"
         viewBox="0 0 349 349"
@@ -80,8 +81,8 @@ const GsapSun = () => {
       >
         <g
           className="face"
-          stroke="#064E3B"
-          strokeWidth="3"
+          stroke="#166534"
+          strokeWidth="2.5"
           strokeMiterlimit="10"
           strokeLinecap="round"
           strokeLinejoin="round"
@@ -141,8 +142,8 @@ const GsapSun = () => {
         </g>
         <g
           className="sun"
-          stroke="#064E3B"
-          strokeWidth="3"
+          stroke="#166534"
+          strokeWidth="2"
           strokeMiterlimit="10"
           strokeLinecap="round"
           strokeLinejoin="round"

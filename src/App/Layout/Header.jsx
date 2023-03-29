@@ -3,10 +3,17 @@ import { NavLink } from "react-router-dom";
 import { logoText } from "../../Contents/siteContents";
 import Menu from "../../Components/Menu";
 import Eyeball from "../../Components/Eyeball";
+import { VscGrabber, VscClose } from "react-icons/vsc";
 
 function Header() {
+  const [isActive, setIsActive] = useState("false");
   const [isSticky, setIsSticky] = useState("false");
   const headerRef = useRef();
+
+  const onToggle = () => {
+    setIsActive(!isActive);
+    console.log(`ToGGLE::`, isActive);
+  };
 
   const handleClickLogo = () => {
     document.getElementById("home").scrollIntoView({ behavior: "smooth" });
@@ -26,17 +33,21 @@ function Header() {
   }, []);
 
   const headerClasses = [
-    "px-32",
+    "px-6",
+    "lg:px-10",
+    "xl:px-20",
     "bg__main",
     "fixed",
+    "top-0",
     "w-full",
-    "z-10",
+    "z-30",
     "transition-all",
   ];
 
   if (isSticky) {
-    headerClasses.shift("px-32");
-    headerClasses.push("fixed w-100 px-10 bg-emerald-600");
+    delete headerClasses[1];
+    delete headerClasses[2];
+    headerClasses.push("fixed w-100  bg-emerald-600");
   }
 
   return (
@@ -54,18 +65,45 @@ function Header() {
               {logoText}
             </NavLink>
           </h1>
-          {!isSticky && (
-            <small className="text-xs">
-              Creative Developer, based in Auckland, New Zealand
-            </small>
-          )}
+          {!isSticky && <small>Creative Developer, based in Auckland</small>}
         </div>
 
-        <div className="absolute flex -translate-x-1/2 -translate-y-1/2 top-1/2 eyeball__container left-1/2">
+        <div className="absolute hidden -translate-x-1/2 -translate-y-1/2 md:flex top-1/2 eyeball__container left-1/2">
           <Eyeball color={isSticky ? "#0f172a" : "#059669"} />
           <Eyeball color={isSticky ? "#0f172a" : "#059669"} />
         </div>
-        <Menu className={isSticky ? "text__light" : "text-gray-900"} />
+        <Menu
+          className={`hidden lg:block ${
+            isSticky ? "text__light" : "text-gray-900"
+          }`}
+        />
+
+        <div className="flex lg:hidden">
+          <button
+            type="button"
+            className={`p-1 rounded-full ${
+              isSticky
+                ? "bg__light text-emerald-600"
+                : "bg-emerald-600 text__light"
+            }`}
+            onClick={onToggle}
+          >
+            {!isActive ? (
+              <VscClose className="text-2xl font-bold" />
+            ) : (
+              <VscGrabber className="text-2xl font-bold" />
+            )}
+          </button>
+        </div>
+        <div
+          className={`${
+            !isActive
+              ? "bg-emerald-600 min-w-[20vh] animate__animated animate__fadeInRight animate__faster h-screen  absolute right-0"
+              : "hidden"
+          } ${isSticky ? "top-12" : "top-16"}`}
+        >
+          <Menu className="text__light" />
+        </div>
       </div>
     </header>
   );

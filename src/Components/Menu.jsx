@@ -17,9 +17,6 @@ function Menu({ className }) {
 
     const navLinkClasses = ["font__heading"];
 
-    console.log(`active::`, activeLinkId);
-    console.log(`content::`, content);
-
     if (activeLinkId === content) {
       navLinkClasses.push("text-slate-900");
     }
@@ -39,7 +36,7 @@ function Menu({ className }) {
 
   return (
     <nav className={className}>
-      <ul className="block pl-0 text-3xl list-none menus md:text-xl md:flex">
+      <ul className="block pl-0 text-3xl list-none menus md:text-xl lg:flex">
         {navLinks.map((nav) => renderNavkLink(nav))}
       </ul>
     </nav>

@@ -19,7 +19,7 @@ const introData = {
 		third: 'Coding & Design',
 	},
 	description:
-		'An experienced Front-end Developer with 3 years of development experience with a strong web design background. \n' +
+		'An experienced Front-end Developer with 3+ years of development experience with a strong web design background. \n' +
 		'\n' +
 		'Building state-of-the-art, easy-to-use, user-friendly websites and applications is truly a passion of mine.',
 };

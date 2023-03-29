@@ -1,12 +1,14 @@
 import React from "react";
+import { ParallaxProvider } from "react-scroll-parallax";
 import { Parallax } from "react-scroll-parallax";
-import { VscLinkExternal } from "react-icons/vsc";
+import Project from "./Project";
 import "./ProjectThumb.scss";
 import ImageEffect from "../ImageEffect/ImageEffect";
+import { useMediaQuery } from "react-responsive";
 
 export default function ProjectThumb({ ...props }) {
-  const { image, title, keywords, index, link } = props;
-
+  const { index, image } = props;
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1280px)" });
   let parallaxMoveValue = [30, 0];
 
   if (index % 2 === 0) {
@@ -14,31 +16,21 @@ export default function ProjectThumb({ ...props }) {
   }
 
   return (
-    // <Parallax speed={-5} translateX={parallaxMoveValue}>
-    <a
-      href={link}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="relative inline-block my-20 project-thumb"
-    >
-      <ImageEffect
-        imgSrc={image}
-        className="absolute -translate-x-1/2 opacity-0 -translate-y-2/3 top-1/2 left-1/2"
-      />
-      <h2 className="relative flex uppercase text-8xl">
-        {title}
-        <VscLinkExternal className="pt-2 mt-2 text-3xl" />
-      </h2>
-      <div className="keyword-list">
-        <div className="keyword-list-container">
-          {keywords.map((keyword, index) => (
-            <span key={index} className="px-2 text-emerald-600 keyword">
-              #{keyword}
-            </span>
-          ))}
-        </div>
-      </div>
-    </a>
-    // </Parallax>
+    <>
+      {isTabletOrMobile && <Project {...props} />}
+      {!isTabletOrMobile && (
+        <ParallaxProvider>
+          <Parallax speed={-5} translateX={parallaxMoveValue}>
+            <div className="relative inline-block project-wrapper">
+              <Project {...props} />
+              <ImageEffect
+                imgSrc={image}
+                className="absolute -translate-x-1/2 opacity-0 -translate-y-2/3 top-1/2 left-1/2"
+              />
+            </div>
+          </Parallax>
+        </ParallaxProvider>
+      )}
+    </>
   );
 }

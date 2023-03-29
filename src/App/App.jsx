@@ -8,11 +8,13 @@ import MousePointer from "../Components/MousePointer";
 
 export default function App() {
   return (
-    <NavProvider>
+    <>
       <MousePointer />
-      <Header />
-      <Main />
-      <Footer />
-    </NavProvider>
+      <NavProvider>
+        <Header />
+        <Main />
+        <Footer />
+      </NavProvider>
+    </>
   );
 }

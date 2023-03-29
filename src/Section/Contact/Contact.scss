@@ -1,8 +1,16 @@
 @import "../../Scss/variables/colors";
+@import "../../Scss/variables/default-variables.scss";
 
 .section-contact {
-  background-position: calc(100% - 2.5rem) -20%;
-  background-size: 17em;
+  background-position: calc(100% + 2.5em) 5em;
+  background-size: 15em;
+
+  @media (min-width: $sm) {
+    background-position: calc(100% - 2.5rem) -20%;
+    background-size: 17em;
+    
+    // background-size: 15em;
+  }
 }
 
 .img-finger {
