@@ -4,6 +4,6 @@ import envCompatible from 'vite-plugin-env-compatible';
 
 export default defineConfig({
 	envPrefix: 'REACT_APP_',
-	base: '/',
+	base: '/react-portfolio/',
 	plugins: [react(), envCompatible()],
 });
