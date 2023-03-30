@@ -10,7 +10,7 @@ export default function ImageEffect({ className, imgSrc }) {
         style={{
           width: "100%",
           height: "100%",
-          backgroundSize: "cover",
+          backgroundSize: "contain",
           backgroundPosition: "center",
           pinterEvent: "none"
         }}

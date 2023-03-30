@@ -1,16 +1,17 @@
 import React from "react";
 import { VscLinkExternal } from "react-icons/vsc";
-import "./ProjectThumb.scss";
+import ImageEffect from "../ImageEffect/ImageEffect";
+import "./Project.scss";
 
 export default function Project({ ...props }) {
-  const { title, keywords, link } = props;
+  const { title, keywords, link, image } = props;
 
   return (
     <a
       href={link}
       target="_blank"
       rel="noopener noreferrer"
-      className="relative inline-block xl:my-20"
+      className="relative inline-block project xl:my-20"
     >
       <h2 className="inline text-2xl uppercase sm:text-5xl md:text-6xl xl:text-8xl">
         {title}
@@ -25,6 +26,11 @@ export default function Project({ ...props }) {
           ))}
         </div>
       </div>
+
+      <ImageEffect
+        imgSrc={image}
+        className="absolute -translate-x-1/2 opacity-0 -translate-y-2/3 top-1/2 left-1/2"
+      />
     </a>
   );
 }

@@ -1,9 +1,9 @@
 .image-effect {
   aspect-ratio: 16 / 9;
-  min-height: 200px;
+  min-height: min(200px, 40vh);
   width: max(30vw, 10rem);
 
   canvas {
-    width: max(30vw, 10rem);
+    max-width: 100%;
   }
 }
