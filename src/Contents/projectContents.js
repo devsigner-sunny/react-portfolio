@@ -9,7 +9,7 @@ const projectHAH = {
 		'Custom Gutenberg blocks',
 	],
 	link: 'http://akohiringa.co.nz',
-	image: '/assets/img/projectHAH.png',
+	image: '/react-portfolio/assets/img/projectHAH.png',
 };
 
 const projectEpic = {
@@ -21,7 +21,7 @@ const projectEpic = {
 		'Custom Gutenberg blocks',
 	],
 	link: 'https://epic.akohiringa.co.nz/',
-	image: '/assets/img/projectEpic.png',
+	image: '/react-portfolio/assets/img/projectEpic.png',
 };
 
 const projectRF = {
@@ -33,7 +33,7 @@ const projectRF = {
 		'Custom Gutenberg blocks',
 	],
 	link: 'https://rocketfreight.elementor.cloud/',
-	image: '/assets/img/projectRF.png',
+	image: '/react-portfolio/assets/img/projectRF.png',
 };
 
 const projectWO = {
@@ -46,7 +46,7 @@ const projectWO = {
 		'Custom Gutenberg blocks',
 	],
 	link: 'https://www.wateroutlook.com/',
-	image: '/assets/img/projectWO.png',
+	image: '/react-portfolio/assets/img/projectWO.png',
 };
 
 const projectTBH = {
@@ -57,7 +57,7 @@ const projectTBH = {
 		'Frontend + Backend Development',
 	],
 	link: 'https://www.thebetterhalfwine.com/',
-	image: '/assets/img/projectTBH.png',
+	image: '/react-portfolio/assets/img/projectTBH.png',
 };
 
 const projectJTW = {
@@ -68,7 +68,7 @@ const projectJTW = {
 		'Frontend Development',
 	],
 	link: 'https://www.julestaylor.com/',
-	image: '/assets/img/projectJTW.png',
+	image: '/react-portfolio/assets/img/projectJTW.png',
 };
 
 
@@ -82,7 +82,7 @@ const projectCloudyards = {
 		'View filter',
 	],
 	link: 'https://cloudyards.co.nz/',
-	image: '/assets/img/projectCloudyard.png',
+	image: '/react-portfolio/assets/img/projectCloudyard.png',
 };
 
 const featureProjects = [
