@@ -1,5 +1,44 @@
-.project {
-  .browser-container__contents {
-    aspect-ratio: 16/9;
+
+
+
+.image-effect {
+  transition: all 1s ease;
+  animation: fadein;
+  animation-duration: 0.5s;
+    
+}
+
+.project:hover {
+  .image-effect {
+    opacity: 0.98;
+  
   }
 }
+
+
+.keyword-list {
+  height: 3em;
+  overflow: hidden;
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+  will-change: transform;
+}
+
+.keyword-list-container {
+  animation: flows 50s linear infinite;
+  left: 0;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+@keyframes flows {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
