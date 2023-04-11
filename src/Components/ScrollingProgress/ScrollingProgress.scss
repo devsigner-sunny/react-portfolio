@@ -1,0 +1,10 @@
+@import "../../Scss/variables/colors";
+.scrolling-progress {
+  &::-webkit-progress-bar {
+    background: transparent;
+  }
+
+  &::-webkit-progress-value {
+    background-color: $black;
+  }
+}
