@@ -12,7 +12,6 @@ function Header() {
 
   const onToggle = () => {
     setIsActive(!isActive);
-    console.log(`ToGGLE::`, isActive);
   };
 
   const handleClickLogo = () => {
@@ -59,7 +58,7 @@ function Header() {
             onClick={handleClickLogo}
           >
             <NavLink
-              to="/"
+              to="/react-portfolio"
               className={isSticky ? "text__light" : "text-emerald-600"}
             >
               {logoText}
