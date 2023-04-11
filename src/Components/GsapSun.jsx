@@ -1,11 +1,10 @@
 /* eslint-disable */
 import { gsap } from "gsap";
-import { useEffect, useRef, useLayoutEffect } from "react";
+import { useEffect, useRef } from "react";
 
 const GsapSun = ({className}) => {
   const sun = useRef(null);
   const tl = useRef();
-  const faceRef = useRef();
 
   useEffect(() => {
     let ctx = gsap.context(() => {
@@ -31,48 +30,10 @@ const GsapSun = ({className}) => {
     return () => ctx.revert();
   }, []);
 
-  // useLayoutEffect(()=> {
-  //   const ctx = gsap.context(() => {
-  //     tl.current = gsap.timeline();
-
-  //     gsap.set(faceRef, {
-  //       autoAlpha: 0,
-  //       y: 50
-  //     });
-
-  //     tl.to(
-  //       faceRef,
-  //       1.5,
-  //       {
-  //         autoAlpha: 1,
-  //         stagger: 0.2,
-  //         y: 0,
-  //         ease: "power4"
-  //       },
-  //       0.2
-  //     );
-
-  //     tl.from(
-  //       "svg path",
-  //       {
-  //         autoAlpha: 0,
-  //         scale: 0,
-  //         transformOrigin: "center center",
-  //         stagger: 0.1,
-  //         duration: 1.2,
-  //         ease: "Power4.inOut"
-  //       },
-  //       0.3
-  //     );
-
-  //     return () => ctx.revert();
-  //   })
-  // })
-
   return (
     <div ref={sun} className={className}>
       <svg
-        className="w-100 h-100"
+        className="w-100 h-100 entire"
         width="349"
         height="349"
         viewBox="0 0 349 349"
