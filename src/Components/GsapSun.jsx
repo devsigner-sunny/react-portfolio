@@ -9,20 +9,23 @@ const GsapSun = ({className}) => {
   useEffect(() => {
     let ctx = gsap.context(() => {
       tl.current = gsap
-        .timeline()
+        .timeline({delay: 0.5})
         .from(".entire", {
           autoAlpha: 0,
           scale: 12,
           transformOrigin: "center center",
           x: 200,
+          duration: 2
         })
         .from(".face", { opacity: 0 })
+        .from (".sun", {opacity: 0.3, duration: 0.5})
 
-        .to(".entire", { autoAlpha: 1, scale: 1.5, x: 0, duration: 1 })
+        .to(".entire", { autoAlpha: 1, scale: 1, x: 0})
         .to(".sun", {
           transformOrigin: "center center",
-          duration: 0.5,
-          rotate: 180,
+          duration: 1,
+          ease:"power3.inOut",
+          rotate: 30,
         })
         .to(".face", { opacity: 1, duration: 1 });
     }, sun);
