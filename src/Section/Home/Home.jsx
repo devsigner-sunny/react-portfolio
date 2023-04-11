@@ -31,7 +31,9 @@ function Home() {
             }}
           />
         </h1>
-        <p className="mb-1 text-center lg:text-left lg:pr-32">{introData.description}</p>
+        <p className="mb-1 text-center lg:text-left lg:pr-32">
+          {introData.description}
+        </p>
       </div>
       <div className="absolute right-0 flex-col hidden lg:flex lg:relative lg:basis-1/4">
         <GsapSun className="relative scale-100 md:opacity-100 opacity-30 lg:scale-150" />

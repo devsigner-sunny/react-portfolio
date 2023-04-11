@@ -1,10 +1,12 @@
 import React from "react";
 import { VscLinkExternal } from "react-icons/vsc";
 import ImageEffect from "../ImageEffect/ImageEffect";
+import { useMediaQuery } from "react-responsive";
 import "./Project.scss";
 
 export default function Project({ ...props }) {
   const { title, keywords, link, image } = props;
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1280px)" });
 
   return (
     <a
@@ -26,11 +28,12 @@ export default function Project({ ...props }) {
           ))}
         </div>
       </div>
-
-      <ImageEffect
-        imgSrc={image}
-        className="absolute -translate-x-1/2 opacity-0 -translate-y-2/3 top-1/2 left-1/2"
-      />
+      {!isTabletOrMobile && (
+        <ImageEffect
+          imgSrc={image}
+          className="absolute -translate-x-1/2 opacity-0 -translate-y-2/3 top-1/2 left-1/2"
+        />
+      )}
     </a>
   );
 }
