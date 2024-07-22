@@ -2,7 +2,7 @@ const logoText = 'Sunny Kim';
 const meta = {
 	title: 'Sunny Kim',
 	description:
-		"I'm Sunny Kim front-end developer with a strong web design background. currently working in Auckland.",
+		"I'm Sunny Kim front-end developer with a strong web design background. currently living in Perth, Australia.",
 };
 
 const socialLinks = {
@@ -12,16 +12,16 @@ const socialLinks = {
 };
 
 const introData = {
-	title: 'Kia Ora!',
+	title: 'G’day, mate!',
 	animated: {
 		first: "I'm a devsigner.",
 		second: 'DEVeloper & deSIGNER',
 		third: 'Coding & Design',
 	},
 	description:
-		'An experienced Front-end Developer with 3+ years of development experience with a strong web design background. \n' +
+		'An experienced Front-end Developer with 5+ years of development experience with a strong web design background. \n' +
 		'\n' +
-		'Building state-of-the-art, easy-to-use, user-friendly websites and applications is truly a passion of mine.',
+		'Building state-of-the-art, easy-to-use, user-friendly websites and applications is truly a passion of mine. I have worked in New Zealand for the past few years and just relocated to Perth, Australia.  I am thrilled to have new experiences here!'
 };
 
 const contact = {

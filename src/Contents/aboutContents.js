@@ -2,7 +2,7 @@ const aboutContents = [
 	{
 		dot: '',
 		html: `<span class="text-indigo-500">class
-          <span class="text-amber-200">Sunny Kim </span>{
+          <span class="text-amber-200">Sunny Sunhwa Kim </span>{
          </span>`,
 	},
 	{
@@ -28,7 +28,7 @@ const aboutContents = [
 	{
 		dot: '····',
 		html: `
-      <span class="text-rose-500">this</span>.<span class="text-cyan-400">name</span><span class="text-rose-500">=</span><span class="text-emerald-500">'Sunny Kim'</span>
+      <span class="text-rose-500">this</span>.<span class="text-cyan-400">name</span><span class="text-rose-500">=</span><span class="text-emerald-500">'Sunny Sunhwa Kim'</span>
       `,
 	},
 	{
@@ -62,22 +62,29 @@ const aboutContents = [
 	{
 		dot: '······',
 		html: `
-      { <span class="text-emerald-500">'Feb 2022 - Now'</span>
-      : <span class="text-emerald-500">'Front end developer at Communica Ltd' </span>}
+      { <span class="text-emerald-500">'May 2023 - Present'</span>
+      : <span class="text-emerald-500">'Front end developer at Engage Digital in New Zealand' </span>}
+      `,
+	},
+	{
+		dot: '······',
+		html: `
+      { <span class="text-emerald-500">'Feb 2020 - Apr 2023'</span>
+      : <span class="text-emerald-500">'Front end developer at Communica Ltd in New Zealand' </span>}
       `,
 	},
 	{
 		dot: '······',
 		html: `
       { <span class="text-emerald-500">'Aug 2018 - Dec 2019'</span>
-      : <span class="text-emerald-500">'Web Designer & Developer at UrbanVape Co' </span>}
+      : <span class="text-emerald-500">'Web Designer & Developer at UrbanVape Co in New Zealand' </span>}
       `,
 	},
 	{
 		dot: '······',
 		html: `
       { <span class="text-emerald-500">'Nov 2015 – Aug 2017'</span>
-      : <span class="text-emerald-500">'Senior Web Designer at Supply Route.,LTD' </span>}
+      : <span class="text-emerald-500">'Senior Web Designer at Supply Route.,LTD in Korea' </span>}
       `,
 	},
 	{
@@ -99,23 +106,23 @@ const aboutContents = [
 	{
 		dot: '······',
 		html: `
-      { <span class="text-emerald-500">'Nov 2015 – Aug 2017'</span>
+      { <span class="text-emerald-500">'Feb 2018 – Mar 2019'</span>
       : <span class="text-emerald-500">'Graduate diploma in IT (lv.7) from Aspire2
- International' </span>}
+ International in New Zealand' </span>}
       `,
 	},
 	{
 		dot: '······',
 		html: `
       { <span class="text-emerald-500">'Sep 2017 - Jan 2018'</span>
-      : <span class="text-emerald-500">'Web front end development bootcamp' </span>}
+      : <span class="text-emerald-500">'Professional front end development bootcamp at Fast Campus in Korea' </span>}
       `,
 	},
 	{
 		dot: '······',
 		html: `
       { <span class="text-emerald-500">'Feb 2007 - Feb 2012'</span>
-      : <span class="text-emerald-500">'Bachelor of Design from Seoul National Science and Technology' </span>}
+      : <span class="text-emerald-500">'Bachelor of Design from Seoul National Science and Technology in Korea' </span>}
       `,
 	},
 	{
@@ -137,7 +144,7 @@ const aboutContents = [
 	{
 		dot: '······',
 		html: `
-      <span class="text-emerald-500">'HTML/HTML5', 'CSS/CSS3', 'Scss', 'Less', 'Tailwind', 'jQuery', 'JavaScript', 'Git', 'Bootstrap', 'Gulp', 'Webpack', 'TypeScript', 'React.js', 'Node.js', 'Drupal', 'Docker', 'Storybook', 'Wordpress'</span>
+      <span class="text-emerald-500">'HTML/HTML5', 'CSS/CSS3', 'Scss', 'Less', 'Tailwind', 'jQuery', 'JavaScript', 'Git', 'Bootstrap', 'Gulp', 'Webpack', 'Vite', 'TypeScript', 'React.js', 'Node.js', 'Drupal', 'Docker', 'Storybook', 'Wordpress', 'Shopify', 'MySQL', 'MariaDB'</span>
       `,
 	},
 	{
@@ -159,7 +166,7 @@ const aboutContents = [
 	{
 		dot: '······',
 		html: `
-      <span class="text-emerald-500">'Agile', 'Scrum', 'CI/CD', 'UI/UX', 'Responsive web design', 'Design mock-ups', 'Figma', 'Sketch', 'Photoshop', 'Illustrator', 'Youtrack'</span>
+      <span class="text-emerald-500">'Agile', 'Scrum', 'CI/CD', 'UI/UX', 'Responsive web design', 'Design mock-ups', 'Figma', 'Sketch', 'Photoshop', 'Illustrator', 'Youtrack', 'ClickUp'</span>
       `,
 	},
 	{

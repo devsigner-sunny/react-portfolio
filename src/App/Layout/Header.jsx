@@ -64,7 +64,7 @@ function Header() {
               {logoText}
             </NavLink>
           </h1>
-          {!isSticky && <small>Creative Developer, based in Auckland</small>}
+          {!isSticky && <small>Creative Developer, based in Perth, AU</small>}
         </div>
 
         <div className="absolute hidden -translate-x-1/2 -translate-y-1/2 md:flex top-1/2 eyeball__container left-1/2">
