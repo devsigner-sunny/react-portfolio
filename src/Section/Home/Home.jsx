@@ -17,7 +17,7 @@ function Home() {
     >
       <div className="flex flex-col items-center justify-center flex-auto lg:justify-start lg:items-start lg:-mt-20 lg:basis-3/4">
         <h4 className="font-medium text__black mb-1x">{introData.title}</h4>
-        <h1 className="my-10 text-4xl leading-relaxed text-center break-words lg:text-left sm:text-6xl text-emerald-700">
+        <h1 className="my-10 text-4xl leading-relaxed text-center break-words lg:text-left sm:text-6xl text-emerald-700 min-h-[3.3em] xl:min-h-fit">
           <Typewriter
             options={{
               strings: [

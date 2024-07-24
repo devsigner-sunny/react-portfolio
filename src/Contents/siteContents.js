@@ -21,7 +21,7 @@ const introData = {
 	description:
 		'An experienced Front-end Developer with 5+ years of development experience with a strong web design background. \n' +
 		'\n' +
-		'Building state-of-the-art, easy-to-use, user-friendly websites and applications is truly a passion of mine. I have worked in New Zealand for the past few years and just relocated to Perth, Australia.  I am thrilled to have new experiences here!'
+		'Building state-of-the-art, easy-to-use, user-friendly websites and applications is truly a passion of mine. I am just relocated to Perth, Australia.  I am thrilled to have new experiences here!'
 };
 
 const contact = {
