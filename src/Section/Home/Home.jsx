@@ -37,10 +37,9 @@ function Home() {
       </div>
       <div className="absolute right-0 flex-col hidden lg:flex lg:relative lg:basis-1/4">
         <GsapSun className="relative scale-100 md:opacity-100 opacity-30 lg:scale-150" />
-        {/* <div className="absolute right-0 w-40 h-40 translate-x-1/2 -translate-y-1/2 rounded-full -mr-1/2 top-1/3 scale-180 md:w-96 md:h-96 opacity-10 -z-10 bg-emerald-600"></div> */}
       </div>
 
-      <div className="z-0 flex justify-center pt-8 sm:pt-0 sm:absolute bottom-20">
+      <div className="z-0 flex justify-center sm:absolute bottom-20">
         <img
           src={symbolFinger}
           alt="scroll down icon"
