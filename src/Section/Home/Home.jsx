@@ -31,7 +31,7 @@ function Home() {
             }}
           />
         </h1>
-        <p className="mb-1 text-center lg:text-left lg:pr-32">
+        <p className="text-sm md:text-base mb-1 text-center lg:text-left lg:pr-32">
           {introData.description}
         </p>
       </div>

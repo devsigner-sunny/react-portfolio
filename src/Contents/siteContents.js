@@ -12,7 +12,7 @@ const socialLinks = {
 };
 
 const introData = {
-	title: 'G’day, mate!',
+	title: 'G’day!',
 	animated: {
 		first: "I'm a devsigner.",
 		second: 'DEVeloper & deSIGNER',
