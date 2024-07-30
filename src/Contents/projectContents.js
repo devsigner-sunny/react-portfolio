@@ -85,7 +85,19 @@ const projectCloudyards = {
 	image: '/react-portfolio/assets/img/projectCloudyard.png',
 };
 
+const projectET = {
+	title: 'Eunice Taylor',
+	keywords: ['Designer Furniture & Lighting', 'Shopify', 'Scss', 'Bootstrap', 'Request a Quote', 'Custom infinite scroll', 'E-commerce', 'Wholesale discount', 'Designer brand list', 'Gulp',  'UI/UX', 'Maintenance', 'Responsive'],
+	responsibilities: [
+		'Build from scratch',
+		'Frontend Development'
+	],
+	link: 'https://eunicetaylor.co.nz/',
+	image: '/react-portfolio/assets/img/projectET.png',
+};
+
 const featureProjects = [
+	projectET,
 	projectHAH,
 	projectWO,
 	projectTBH,
